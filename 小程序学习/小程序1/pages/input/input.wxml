@@ -1,0 +1,8 @@
+<input></input>
+<input placeholder="我是输入框"></input>
+<input placeholder="我是输入框" placeholder-style="color:green"></input>
+<input placeholder="我是输入框" placeholder-style="color:green" value="YZ留学" >
+</input>
+<input maxlength="10" placeholder="最大输入长度为10"/>
+<input auto-focus placeholder="将会获取焦点"/>
+<input type="number" placeholder="这是一个数字输入框"/>

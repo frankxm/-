@@ -1,0 +1,11 @@
+<!--view组件-->
+<view>我是view组件1</view>
+<view>我是view组件2</view>
+<text>我是text组件1</text>
+<text>我是text组件2</text>
+<text>我是text组件3</text>
+<text>我是text组件4</text>
+<view class="parent">
+<text class="son">我是view里的text</text>
+
+</view>

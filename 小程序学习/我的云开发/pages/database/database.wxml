@@ -1,0 +1,10 @@
+输入商品名
+<input bindinput="goname"></input>
+输入商品价格
+<input bindinput="goprice"></input>
+<button bindtap="addmerchandise" type="primary">添加</button>
+<view wx:for="{{list}}" >
+<view bindtap="godetail" data-id="{{item._id}}" >商品名：{{item.name}},价格:{{item.price}}</view>
+</view>
+<button bindtap="upsort">按商品价格升序排序</button>
+<button bindtap="downsort">按商品价格降序排序</button>

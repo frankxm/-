@@ -1,0 +1,5 @@
+<swiper class="father" indicator-dots="true" indicator-color="white" autoplay interval="2000">
+<swiper-item wx:for="{{imagelist}}" style="background:red" >
+  <image src="{{item}}"></image>
+  </swiper-item>
+</swiper>

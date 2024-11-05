@@ -1,0 +1,30 @@
+<view class="cates">
+    <!-- 搜索框区域 -->
+    <view class="searchroot">
+        <input class="searchinput" placeholder="请输入" placeholder-style="color:grey" bindinput="getdetail" bindconfirm="godetail" confirm-type="search"></input>
+        <image class="searchicon" src="../../images/search.png" bindtap="godetail"></image>
+    </view>
+    <view class="cates_container">
+        <!-- 左侧菜单 -->
+        <scroll-view scroll-y="{{true}}" class="left_menu">
+            <view class="item_menu {{index===currentindex? 'active':''}}" wx:for="{{country_name}}" wx:key="*this" bindtap="gocountry"  data-cindex="{{index}}">
+                {{item}}
+            </view>
+        </scroll-view>
+        <!-- 右侧商品内容 -->
+        <scroll-view scroll-top="{{scrolltop}}" scroll-y="{{true}}" class="right_content">
+            <view class="item_group" wx:for="{{school_list}}" wx:key="index">
+                <view class="goods_title">
+                    <text class="delimiter">/</text>
+                    <text class="title">{{item.school_name}}</text>
+                    <text class="delimiter">/</text>
+                </view>
+                <view class="goods_list">
+                    <navigator  url="/pages/profession_detail/profession_detail?school_database={{item.country_database}}&_id={{item._id}}">
+                            <image  mode="widthFix" wx:if="{{item.school_picture[0]}}"  src="{{item.school_picture[0]}}"></image>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1rem=1html标签，需要先设置html的font-size */
+        /* 媒体查询，根据不同视口宽度设置不同根字号 */
+        /* @media (width:375px) {
+            html{
+                font-size: 40px;
+            }
+        } */
+        /* 一般把html标签的字号设置为视口宽度的1/10 */
+        /* less中除法需要加（/）或者./ */
+        /* less中&表示当前选择器，不会生成后代选择器,如&:hover表示当前的伪类选择器 */
+        /* less变量定义使用 */
+        /* @color:pink; */
+        /* color:@color */
+        /* 导入less文件，才需要引入的less文件上@import(空格)''; */
+        /* 单独导出CSS文件 */
+        /* 第一行添加// out:(空格)./abc/ */
+        /* 禁止导出 */
+        /* 第一行添加// out: false */
+        /* 1vw=1/100视口宽度 1vh=1/100视口高度
+        一般针对全面屏的原因，不能vw vh混用，只能单独用 */
+    </style>
+</head>
+<body>
+    
+    <!-- 一般将flexible-js放到body结束前,自动计算根字号进行移动适配 -->
+    <script src="./flexible.js"></script>
+</body>
+</html>

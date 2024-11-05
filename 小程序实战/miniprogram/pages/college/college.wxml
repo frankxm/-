@@ -1,0 +1,21 @@
+<!-- 上侧学校栏 -->
+<view  class="cates_container">
+        <scroll-view scroll-x="{{true}}" class="up_menu">
+                <text  class="item_menu {{index===currentindex?'active':''}}"  wx:for="{{country_name}}" wx:key="index" bindtap="gocountry"  data-cindex="{{index}}" >
+                        {{item}}
+                </text>
+        </scroll-view>
+</view>
+<!-- 学校展示列表 -->
+<view wx:for="{{school_list}}" wx:key="school_name" class="hot_item" bindtap="enterschool" data-id="{{item._id}}" data-database_name="{{item.country_database}}">
+        <image wx:if="{{item.school_picture[0]}}" src="{{item.school_picture[0]}}" class="hot_image_item"></image>
+        <view class="content_wrap">
+                <view class="title_item">{{item.school_name}}</view>
+                <view class="view_item">点击量:{{item.viewnum}}</view>
+        </view>
+</view>
+<view class="btn">
+        <text class="delimiter">/</text>
+        <text class="btn_title">我是有底线的</text>
+        <text class="delimiter">/</text>
+</view>

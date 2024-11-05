@@ -1,0 +1,7 @@
+
+<view >商品名：{{list.name}},价格:{{list.price}}</view>
+更新商品价格
+<input bindinput="getnewprice"></input>
+<button type="primary" bindtap="updateprice">更新</button>
+<button bindtap="delete" >删除</button>
+

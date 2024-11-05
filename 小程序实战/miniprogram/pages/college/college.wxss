@@ -1,0 +1,66 @@
+page {
+  background-color: #f5f1f1;
+}
+.cates_container {
+  background-color: #ffffff;
+  padding: 10rpx;
+  height: 150rpx;
+}
+.cates_container .up_menu {
+  display: flex;
+  height: 100%;
+  white-space: nowrap;
+}
+.cates_container .up_menu text {
+  height: 100rpx;
+  margin: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+.cates_container .up_menu .active {
+  color: var(--themeColor);
+  border-bottom: 5rpx solid currentColor;
+}
+.hot_item {
+  display: flex;
+  padding: 20rpx 20rpx 10rpx 30rpx;
+}
+.hot_item .hot_image_item {
+  width: 55vw;
+  height: 240rpx;
+  min-width: 400rpx;
+}
+.hot_item .content_wrap {
+  width: 45vw;
+}
+.hot_item .content_wrap .title_item {
+  font-size: 35rpx;
+  margin-left: 10rpx;
+  width: 100%;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.hot_item .content_wrap .view_item {
+  color: gray;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+}
+.btn .delimiter {
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.btn .btn_title {
+  font-size: 25rpx;
+  color: gray;
+}

@@ -1,0 +1,78 @@
+<tabs tabs="{{tabs}}" bindtabsitemchange="handletabsitemchange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view wx:if="{{schoollist[0]}}" class="collection_wrap">
+            <view bindtap="handleenter" data-_id="{{item._id}}" data-country_database="{{item.country_database}}" wx:for="{{schoollist}}" class="collection_item" wx:key="index">
+                <view class="image_wrap">
+                    <image wx:if="{{item.school_picture[0]}}" src="{{item.school_picture[0]}}" mode="widthFix"></image>
+                </view>
+                <view class="text_item">
+                    <view class="title_item">{{item.school_name}}</view>
+                    <view class="view_item">点击量:{{item.viewnum}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="download_wrap">
+                <view class="download_item">收藏的内容为空喔~</view>
+                <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20200509%2Fdf1bf8b8273645649c4e54fe76e0a321.JPG&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?"></image>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class="check">
+            <view class="exchange_rate">
+                <view class="exchange_item">1港币HKD</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">0.821人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1英镑GBP</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">8.785人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1澳元AUD</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">4.791人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1新加坡元SGD</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">4.738人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1欧元EUR</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">7.402人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1美元USD</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">6.382人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1韩元KRW</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">0.005人民币</view>
+            </view>
+            <view class="exchange_rate">
+                <view class="exchange_item">1日元JPY</view>
+                <view class="exchange_item">~</view>
+                <view class="exchange_item">0.056人民币</view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">
+        <view class="website" wx:for="{{website}}" wx:key="_id">
+            <view class="school_title">
+            <text class="delimiter">/</text>
+            <view class="school_name">{{item.school_name}}</view>
+            <text class="delimiter">/</text>
+            </view>
+            <view class="country">{{item.country_name}}</view>
+            <view class="website_item">
+            <text user-select="{{true}}">{{item.school_website}}</text>
+            </view>
+        </view>
+    </block>
+</tabs>

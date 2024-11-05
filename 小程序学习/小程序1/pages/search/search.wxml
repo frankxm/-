@@ -1,0 +1,6 @@
+<view class="father">
+<input class="son" placeholder="请输入" placeholder-style="color:grey"></input>
+</view>
+<view class="roundOutside">
+<view class="roundInside"></view>
+</view>

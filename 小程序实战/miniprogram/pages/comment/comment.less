@@ -1,0 +1,212 @@
+page {
+  background-color: #f3f4f6;
+}
+.comment_wrap {
+  padding: 30rpx 25rpx;
+  .comment_content {
+    border-bottom: gray 1rpx solid;
+    padding: 20rpx 15rpx;
+
+    .comment_item {
+      .rich-text_item {
+        text-indent: 2em;
+        font-size: 35rpx;
+      }
+    }
+  }
+  .title_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon-iconfontpinglun {
+      font-weight: 800;
+    }
+    .title {
+      text-shadow: 10rpx 4rpx rgb(160, 157, 157);
+      font-size: 55rpx;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10rpx;
+      padding: 10rpx;
+    }
+  }
+    .display {
+      margin-bottom: 30rpx;
+      background-color: #f3f4f6;
+      .user_display{
+        display: flex;
+      .user_info{
+        margin-top: 10rpx;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .user_icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120rpx;
+          height: 120rpx;
+          border-radius: 50%;
+        }
+        .user_name{
+          width: 120rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30rpx;
+          font-weight: 600;
+        }
+      }
+      .display_box {
+        width: 100%;
+        padding: 15rpx;
+        flex: 7;
+        .display_text{
+          font-size: 38rpx;
+          width: 85%;
+          word-break:break-all;
+          margin-top: 10rpx;
+        }
+        .display_img{
+          max-width: 85%;
+        }
+      }
+    }
+      .tool {
+        margin-left: 30vw;
+        display: flex;
+        width: 60vw;
+        .tool_item {
+          
+          flex:1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20rpx 0;
+          position: relative;
+          button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+          }
+          .active{
+            color: var(--themeColor);
+          }
+          .supportnum{
+            margin-left: 10rpx;
+          }
+        }
+        .tool_item:nth-child(1){
+          margin-right: 10rpx;
+        }
+      }
+    }
+  .more {
+    padding: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .more_item {
+      font-weight: 1000;
+      font-style: italic;
+    }
+  }
+  .modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+  }
+  
+  .modal-dialog {
+    width: 80vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 9999;
+  
+    margin: -180rpx 80rpx;
+    border-radius: 36rpx;
+    .fb_main {
+  padding: 20rpx;
+  background-color: #f3f4f6;
+  height: 100vh;
+      .fb_content {
+        height: 75%;
+      background-color: #fff;
+        textarea {
+          height: 85%;
+          width: 100%;
+            padding: 10rpx;
+        }
+    
+        .fb_tool {
+            padding-bottom: 30rpx;
+            display: flex;
+            flex-wrap: wrap;
+            button{
+                margin: 0;
+                width: 90rpx;
+                height: 90rpx;
+                font-size: 60rpx;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 20rpx;
+                color:#ccc;
+                margin-top: 20rpx;
+            }
+            .up_img_item{
+                margin-left: 20rpx;
+                margin-top: 20rpx;   
+            }
+            .remove_tips{
+              color: gray;
+              font-size: 20rpx;
+              margin-left: 10rpx;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+        }
+      }
+      .form_button {
+        margin-top: 20rpx;
+        display: flex;
+        justify-content: flex-end;
+          button{
+           padding: 0;
+          margin:0;
+          width: 30%;
+          display: flex;
+          .icon_item{
+            margin-left: 10rpx;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+          }
+          .submit_item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          }
+      }
+    }
+  }
+  
+}

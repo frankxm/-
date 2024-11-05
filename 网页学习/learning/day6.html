@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 结构伪类选择器：E:first-child{} E:last-child{} E:nth-child(n){}  E:nth-last-child(n){} 
+        此类写法为伪类选择器和并集选择器写法 需要满足既E又是父元素中的第n个子元素  前N个元素可以表示为-n+N 后N个元素可以表示为n+N*/
+      /* E:nth-of-type(n) 只看当前类型E中的子元素*/
+      /* 伪元素 ::before ::after 伪元素必加content属性才生效  伪元素默认显示模式是行内元素 */
+      /* float浮动 让垂直布局盒子变成水平布局 */
+      /* 浮动元素会覆盖标准流中的元素 同时浮动也需要找浮动，下一个元素在前一个浮动后浮动,浮动找浮动  浮动会受到前一个元素边界的影响  浮动元素有特殊的显示效果，一行可以设置多个且可以设置宽高 浮动元素不能设置为水平居中，但是内容可以设置为水平居中*/
+      /*  */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        /* div是块元素，不设宽默认占满一行 */
+        background-color: #333;
+        height: 40px;
+      }
+      .nav {
+        width: 1226px;
+        height: 100px;
+        background-color: #ffc0cb;
+        margin: 0 auto;
+      }
+      .banner {
+        background-color: yellow;
+        height: 460px;
+        width: 1226px;
+        margin: 0 auto;
+      }
+      .left {
+        width: 234px;
+        height: 460px;
+        float: left;
+        background-color: blue;
+      }
+      .right {
+        width: 992px;
+        height: 460px;
+        float: right;
+        background-color: red;
+      }
+      .box {
+        width: 1226px;
+        height: 614px;
+        margin: 0 auto;
+      }
+      .leftbox {
+        width: 234px;
+        height: 614px;
+        background-color: #800000;
+        float: left;
+      }
+      .rightbox {
+        width: 978px;
+        height: 614px;
+        float: right;
+      }
+      .item {
+        width: 234px;
+        height: 300px;
+        background-color: #87ceeb;
+        margin-right: 14px;
+        float: left;
+        margin-bottom: 14px;
+      }
+      /* 找到第四个和第八个去掉margin 不然挤到底下 */
+      .item:nth-child(4n) {
+        margin-right: 0;
+      }
+      /* 找到第五个开始后面的元素去掉下margin */
+      .item:nth-child(n + 5) {
+        margin-bottom: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        float: left;
+      }
+      ul li a {
+        display: inline-block;
+        width: 80px;
+        height: 50px;
+        text-decoration: none;
+        margin-right: 10px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+      }
+      ul li a:hover{
+          background-color:seagreen;
+      }
+      /* 如果子元素浮动了，此时不能撑开父元素，所以
+      1、需要父元素有高度 缺点是在新闻列表 推荐板块中不能固定父元素高度
+      2、额外标签法  在父元素内容后面多加一个块级标签 在标签里设置 clear:both 缺点是多添加了标签，html结构变复杂
+    .clearfix::after{
+        content:'';
+        display:block;
+        clear:both;
+    } 在当前父元素加上clearfix标签
+    补充写法：多加height:0 visibility:hidden 针对content:'.',部分老浏览器不支持content:''*/
+    /* 双伪元素清除法：.clearfix:before,.clearfix::after{
+        content:'';
+        display:table;
+    }
+    .clearfix::after{
+        clear:both
+    }不仅可以解决浮动的影响也可以解决margin的塌陷问题
+     */
+     /* BFC Block Formatting Context 块级格式化上下文
+     BFC盒子会默认包裹子元素,解决margin塌陷问题，设置方法有：父元素设置overflow:hidden、display:inline-block、float:left */
+
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">新闻1</a></li>
+        <li><a href="#">新闻2</a></li>
+        <li><a href="#">新闻3</a></li>
+        <li><a href="#">新闻4</a></li>
+        <li><a href="#">新闻5</a></li>
+        <li><a href="#">新闻6</a></li>
+        <li><a href="#">新闻7</a></li>
+        <li><a href="#">新闻8</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <br /><br />
+    <div class="box">
+      <div class="leftbox"></div>
+      <div class="rightbox">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </body>
+  <br /><br />
+</html>

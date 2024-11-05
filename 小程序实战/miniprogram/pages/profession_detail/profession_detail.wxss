@@ -1,0 +1,76 @@
+page {
+  background: aliceblue;
+  padding-bottom: 90rpx;
+}
+.comment_wrap {
+  padding: 30rpx 25rpx;
+}
+.comment_wrap .title_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment_wrap .title_item .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 10rpx 4rpx #a09d9d;
+}
+.comment_wrap .title_item .iconfont.icon-zhengcejiedu {
+  margin-left: 9rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.comment_wrap .comment_content {
+  border-bottom: gray 1rpx solid;
+  padding: 20rpx 15rpx;
+  margin-bottom: 20rpx;
+}
+.comment_wrap .comment_content .comment_item .policy_item {
+  text-indent: 2em;
+}
+.comment_wrap .school_video .video_title {
+  font-size: 45rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+.comment_wrap .school_video .video_item {
+  margin: 20rpx 0;
+}
+.comment_wrap .school_video .video_item video {
+  width: 100%;
+}
+.comment_wrap .school_video .button_wrap {
+  height: 120rpx;
+}
+.comment_wrap .school_video .button_wrap button {
+  float: right;
+  width: 300rpx;
+  height: 100rpx;
+}
+.comment_wrap .guidance_wrap {
+  border-top: #ccc 1rpx solid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment_wrap .guidance_wrap .guidance {
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  font-style: italic;
+}

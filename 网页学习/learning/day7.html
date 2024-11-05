@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position:relative 相对定位指的是相对于自己原来移动 属性值都是以自身为参考 同时原来的位置还占在页面中 */
+        /* position:absolute 绝对定位指的是相对于浏览器 属性值以浏览器为参考 且原来位置不占页面
+        但有特殊情况，当祖先元素中有定位时，则参考的是最近的有定位的元素进行移动 */
+        /* 子绝父相  因为relative不妥标，下面的盒子不会顶上来 子盒子绝对，父盒子相对 */
+        /*使用子绝父相时发现父元素已经有绝对定位，此时直接子绝即可，不用修改父元素  */
+        /* 子盒子水平居中方法：
+        先子绝父相 在让子盒子往右移动父盒子一半left:50% 再让子盒子往左移动自己一半 transform:translateX(-50%)  如果需要水平垂直居中则多加top 以及transform:translate(-50%,-50%)*/
+        /*div在标准流中独占一行但是用了子绝父相之后div就脱标，比如用了绝对定位，则盒子宽度由内容撑开 需要额外设置  */
+        /* 固定定位position:fixed 会脱标 绝对定位也脱标  */
+        /* 不同布局方式元素的层级关系： 标准流<浮动<定位 
+        相对 绝对 固定默认层级相同 但是都出现时写在下面的元素层级更高会覆盖上面
+        或者通过对相应的类设置z-index:数字 谁数字高谁层级高*/
+        /* 设置行内 行内块元素垂直对齐方式为vertical-align 值有bottom top middle */
+        /* 文本框和表单按钮无法对齐情况：先自动内减 box-sizing:border-box  再vertical-align或者float:left */
+        /* div不设高度由img标签撑开，此时img标签下面会存在额外间隙问题 
+        解决方法一为转成块元素display:block 二为垂直对齐去除默认的baseline */
+        /* 使用line-height  vertical-align:middle让img标签垂直居中 */
+        /* overflow属性设置为auto 就根据内容是否溢出自动显示滚动条 */
+        /* 元素隐藏显示切换 display:none display:block 且display:none在原网页中不占位置 */
+        .father{
+            background-color: pink;
+            width: 600px;
+            height: 600px;
+        }
+        .son{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+        /* 父元素被光标移动则用伪类选择器改变子元素 */
+        .father:hover .son{
+            display: block;
+        }
+        /* opacity 元素整体透明度属性 0到1完全透明到完全不透明*/
+        /* 表格边框单元格合并 border-collapse:collapse */
+        /* 画三角形 
+        1、先设置一个盒子 
+        2、设置四周不同颜色的边框,边框离中间盒子同样距离 
+        3、盒子宽高设置为0保留边框 
+        4、得到四个三角形选择一个其他设为透明 */
+        .box{
+            width: 0px;
+            height: 0px;
+            /* 四周边框离中间盒子的距离 边框离中间盒子部分的背景颜色 */
+            border-bottom:100px solid transparent;
+            border-top:100px solid  transparent;
+            border-left:100px solid  transparent;
+            border-right:180px solid chartreuse;
+        }
+        /* 链接伪类选择器：选中超链接不同状态
+        一般用交集选择器的方法和a标签交来写 
+        a:link为未访问状态 a:visited为访问之后状态 a:hover为鼠标悬停的状态 a:active为鼠标点击后的状态 需要按照lvha顺序来写伪类效果*/
+        /*焦点伪类选择器：常用于表单控件选中元素时获取焦点的状态
+        和输入组件并集选中 input:focus   */
+        /* 属性选择器：常用于input标签选择其中一个html属性 input[type=""] */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <br><br>
+    <div class="box"></div>
+    <br><br>
+</body>
+</html>

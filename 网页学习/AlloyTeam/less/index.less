@@ -1,0 +1,54 @@
+// banner
+.carousel {
+    // 如果视口<768, 图250 max-width
+    // 如果视口<992, 图400 max-width
+    // 如果视口>992, 图500 min-width
+
+    img {
+        // !important保证image高度百分百生效,权重最高
+        height: 100%!important;
+    }
+
+    @media (max-width: 992px) {
+        .item {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .item {
+            height: 250px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            height: 500px;
+        }
+    }
+}
+
+// 头部
+.navbar-default {
+    // 头部透明去边缘
+    background-color: transparent;
+    border: 0;
+}
+
+// 开源项目
+.project {
+    padding-top: 30px;
+    text-align: center;
+
+    .container {
+        div {
+            // 间距要多加个a给间距，这样可以实现左右15px内边距，中间30px内边距，因为contain自带15内边距
+            // background-color: pink;
+            a {
+                display: block;
+                height: 200px;
+                background-color: skyblue;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/profession_detail/profession_detail",
+    "pages/school_detail/school_detail",
+    "pages/school_search/school_search",
+    "pages/college/college",
+    "pages/postgraduate/postgraduate",
+    "pages/admin/admin",
+    "pages/comment/comment",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffb985",
+    "navigationBarTitleText": "YZ留学小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#fc0",
+    "selectedColor": "#f4c903",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/homeno.png",
+        "iconPath": "images/homeyes.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/adminno.png",
+        "iconPath": "images/adminyes.png",
+        "pagePath": "pages/admin/admin",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

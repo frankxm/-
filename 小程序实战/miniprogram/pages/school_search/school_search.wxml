@@ -1,0 +1,28 @@
+<!-- 搜索框区域 -->
+<view>
+<view class="searchroot">
+    <input class="searchinput" placeholder="请输入" placeholder-style="color:grey" bindinput="getdetail" bindconfirm="godetail" confirm-type="search"></input>
+    <image class="searchicon" src="../../images/search.png" bindtap="godetail"></image>
+</view>
+<!-- 热门学校列表 -->
+<block wx:if="{{schoollist[0]}}">
+<view  wx:for="{{schoollist}}" class="hot_item" wx:key="index">
+    <view>
+        <view wx:for="{{item}}" wx:for-item="item" class="big_text_item" wx:key="school_name" bindtap="enterschool" data-id="{{item._id}}" data-database_name="{{item.country_database}}">
+            <image wx:if='{{item.school_picture[0]}}' src="{{item.school_picture[0]}}" class="hot_image_item"></image>
+            <view class="text_item">
+                <view class="title_item">{{item.school_name}}</view>
+                <view class="view_item">点击量:{{item.viewnum}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+</block>
+<block wx:else>
+<view >
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20200509%2Fdf1bf8b8273645649c4e54fe76e0a321.JPG&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?" mode="widthFix" >
+        
+    </image>
+</view>
+</block>
+</view>

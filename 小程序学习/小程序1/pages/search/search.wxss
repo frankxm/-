@@ -1,0 +1,27 @@
+.father{
+  background: #ffb965;
+ 
+  padding:10rpx
+}
+.son{
+  background:white;
+  text-align:center;
+  border-radius: 15rpx;
+}
+.roundOutside{
+background: red;
+width: 200px;
+height:200px;
+border-radius: 100px;
+margin:  5px 60px 5px 60px; 
+}
+.roundInside{
+  background:gainsboro;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  margin:  5px 60px 5px 60px; 
+}
+page{
+  background:gainsboro;
+}

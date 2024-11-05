@@ -1,0 +1,12 @@
+.firstcountry{
+  background: blanchedalmond;
+}
+.secondcountry{
+  background: pink;
+}
+.thirdcountry{
+  background: red;
+}
+.fourthcountry{
+  background: yellow;
+}

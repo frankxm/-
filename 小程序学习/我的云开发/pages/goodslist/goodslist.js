@@ -1,0 +1,35 @@
+Page({
+  data:{
+    list:""
+  },
+  getlist(){
+    wx.cloud.database().collection("goods")
+    .get()
+    .then(res=>{
+      console.log("获取成功",res)
+      wx.stopPullDownRefresh()
+      this.setData({
+        list:res.data
+      })
+    })
+    .catch(err=>{
+      console.log("获取失败",err)
+    })
+  },
+  onLoad(){
+    wx.startPullDownRefresh()
+    this.getlist()
+  },
+  godetail(event){
+    console.log("拿到的所有参数",event)
+  console.log("拿到的参数",event.currentTarget.dataset.id)
+  wx.navigateTo({
+    url: '/pages/gooddetail/gooddetail?id='+event.currentTarget.dataset.id,
+    
+  })
+  },
+  onPullDownRefresh(){
+    console.log("用户刷新了")
+   this.getlist()
+  }
+})

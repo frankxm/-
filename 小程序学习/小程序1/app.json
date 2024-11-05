@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/tabbar_first/tabbar_first",
+    "pages/tabbar_second/tabbar_second",
+    "pages/swiper/swiper",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/search/search",
+    "pages/timer/timer",
+    "pages/array/array",
+    "pages/for/for",
+    "pages/calculator/calculator",
+    "pages/function/function",
+    "pages/button/button",
+    "pages/input/input",
+    "pages/practice_first/practice_first"
+ 
+  
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffb985",
+    "navigationBarTitleText": "YZ留学小程序",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "yellow",
+    "borderStyle": "white",
+    "list": [{
+        "selectedIconPath": "image/630 (1).png",
+        "iconPath": "image/630 (2).png",
+        "pagePath": "pages/tabbar_first/tabbar_first",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/630 (3).png",
+        "iconPath": "image/630 (5).png",
+        "pagePath": "pages/tabbar_second/tabbar_second",
+        "text": "我的"
+      }
+      
+    ]
+  },
+
+
+  "sitemapLocation": "sitemap.json"
+}

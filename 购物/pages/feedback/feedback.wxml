@@ -1,0 +1,29 @@
+<tabs tabs="{{tabs}}" bindtabsitemchange="handletabsitemchange">
+<view class="fb_main">
+    <view class="fb_title">问题的种类</view>
+    <view class="fb_tips">
+        <text >功能建议</text>
+        <text >购买遇到的问题</text>
+        <text >性能问题</text>
+        <text >其他</text>
+    </view>
+    <view class="fb_content">
+        <textarea value="{{textvalue}}" bindinput="handletext" placeholder="请描述一下您的问题"></textarea>
+        <view class="fb_tool">
+            <button bindtap="handlechooseimg">+</button>
+            <view class="up_img_item" wx:for="{{chooseImage}}"
+            wx:key="*this" bindtap="handleremove" data-index="{{index}}">
+               <!--当数组为简单数组的时候key要写*this  -->
+               <!-- 动态往组件传递数据 -->
+                <upimg src="{{item}}"></upimg>
+                </view>
+        </view>
+    </view>
+    <view class="form_button">
+        <button bindtap="handlesubmit" type="warn">
+            <icon type="success_no_circle" size="23" color="white" />
+            提交
+        </button>
+    </view>
+</view>
+</tabs>

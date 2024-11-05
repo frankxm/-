@@ -1,0 +1,6 @@
+<view wx:for="{{list}}">
+<view class="itemroot">
+<view class="uname">{{item.name}}</view>
+<view class="uprofession">{{item.profession}}</view>
+</view>
+</view>

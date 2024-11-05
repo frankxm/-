@@ -1,0 +1,12 @@
+.uname{
+   color:blue;
+   font-size:20px
+}
+.uprofession{
+  color:blueviolet;
+  font-size:15px;
+  margin-bottom:15px;
+}
+.itemroot{
+  background:chocolate;
+}

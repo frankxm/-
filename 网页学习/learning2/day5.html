@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <style>
+        /* 响应式网页中媒体查询，max-width检查视口宽度小于等于某个
+        min-width检查视口宽度大于某个数 */
+        /* 媒体查询用min-width从小到大写，max-width从大到小写 */
+        /* link标签配合媒体查询实现差异化css  link标签中写media="(min-width:)" */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            width: 100%;
+        }
+        .left{
+            width:300px;
+            min-height: 500px;
+            background-color: pink;
+        }
+        .main{
+            flex: 1;
+            min-height: 500px;
+        }
+        /* 若检测到视口宽度小于768，则让左边隐藏 */
+        @media(max-width:768px){
+            .left{
+                display: none;
+            }
+        }
+        /* bootstrap.css和min.css功能是一样的，实际用min.css */
+        /* 栅格系统把网页等份12份，每个盒子可以选择占几份 */
+        /* 超小屏幕为小于768px 类前缀为col-xs-  小屏幕为大于等于768px 类前缀为col-sm-
+        中等屏幕为大于等于992 响应前缀为col-md-*  大屏幕为大于等于1200px 响应前缀为col-lg-  */
+        /* container是版心的类，自带左右padding 15px 在类里面加上.row类可以取消15px */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">left</div>
+        <div class="main">响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果
+            响应式网页效果响应式网页效果响应式
+            网页效果响应式网页效果响应式网页效果响应式网页效果响应式网页效果</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<text bindtap="getname1">点击text组件</text>
+<view bindtap="getname2">点击view组件</view>
+<!-- input组件获取用户输入内容 -->
+<input bindinput="getcontent">获取内容</input>

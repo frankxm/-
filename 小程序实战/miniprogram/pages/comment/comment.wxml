@@ -1,0 +1,90 @@
+<view class="comment_wrap">
+  <view class="title_item">
+    <view class="title">学校相关评论</view>
+    <view class="iconfont icon-iconfontpinglun"></view>
+  </view>
+  <view class="comment_content">
+    <scroll-view scroll-y="true" style="height:900rpx" class="comment_item">
+      <rich-text nodes="{{school.comment}}" class="rich-text_item"></rich-text>
+    </scroll-view>
+  </view>
+  <view wx:if="{{islogin}}">
+    <view class="more" bindtap="showDialogBtn">
+      <!-- url="/pages/writing/writing?country_database={{country_database}}&_id={{_id}}" -->
+      <view class="more_item">对于该学校，你的想法是什么呢？</view>
+      <view class="iconfont icon-xiugai"></view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="more" bindtap="login">
+      <view class="more_item">对于该学校，你的想法是什么呢？</view>
+      <view class="iconfont icon-xiugai"></view>
+    </view>
+  </view>
+  <view class="display" wx:for="{{school.writing_text}}" wx:key="index">
+    <view class="">
+      <view class="iconfont icon-annex"></view>
+    </view>
+    <view class="user_display">
+      <view class="user_info">
+        <image class="user_icon" src="{{userInfo[index].avatarUrl}}"></image>
+        <view class="user_name">{{userInfo[index].nickName}}</view>
+      </view>
+      <view class="display_box">
+        <image wx:if="{{imgurl[index]}}" class="display_img" mode="widthFix" src="{{imgurl[index]}}"></image>
+        <view class="display_text">
+          <text decode="{{true}}" space="ensp">{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="tool">
+      <view class="tool_item">
+        <view class="iconfont icon-iconfontzhizuobiaozhun023148 {{support[index]===true? 'iconfont icon-iconfontzhizuobiaozhun023148 active':''}}"></view>
+        <button bindtap="handlesupport" data-index="{{index}}"></button>
+        <view wx:if="{{supportnum}}">
+          <view class="supportnum{{support[index]?' active ':''}}">{{supportnum[index]}}</view>
+        </view>
+      </view>
+      <view class="tool_item">
+        <view class="iconfont icon-ziyuan172 {{index===currentindex? 'iconfont icon-ziyuan172 active':''}}"></view>
+        <button bindtap="handleoppose" data-index="{{index}}"></button>
+      </view>
+      <view class="tool_item">
+        <view class="iconfont icon-fenxiang"></view>
+        <button open-type="share"></button>
+      </view>
+      <view class="tool_item" bindtap="showDialogBtn">
+        <!-- url="/pages/writing/writing?country_database={{country_database}}&_id={{_id}}" -->
+        <view class="iconfont icon-pinglun"></view>
+      </view>
+      <view wx:if="{{currentuser.nickName===userInfo[index].nickName}}" class="tool_item" data-id="{{index}}">
+        <view class="iconfont icon-cuowu"></view>
+        <button bindtap="handlecancel" data-id="{{index}}"></button>
+      </view>
+    </view>
+  </view>
+  <!-- 弹窗 -->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="fb_main">
+      <view class="fb_content">
+        <textarea  value="{{text}}" bindinput="onInputtingDesc" placeholder="请发表你的评论"></textarea>
+        <view class="fb_tool">
+          <button bindtap="insertImage">+</button>
+          <view class="up_img_item" bindlongpress="handleremove">
+            <upimg src="{{tempfile}}"></upimg>
+          </view>
+          <view wx:if="{{tempfile}}" class="remove_tips">长按图片可删除</view>
+        </view>
+      </view>
+      <view class="form_button">
+        <button bindtap="handlesubmit" type="warn">
+          <view class="icon_item">
+            <icon type="success_no_circle" size="23" color="white" />
+          </view>
+          <view class="submit_title">提交</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

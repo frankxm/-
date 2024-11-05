@@ -1,0 +1,5 @@
+<view wx:for="{{list}}" wx:key="index">
+<!-- key用来消掉runtime warning 警告 -->
+<view class="son">id:{{item._id}},number:{{item.number}}
+</view>
+</view>

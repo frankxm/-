@@ -1,0 +1,4 @@
+<input placeholder="输入框" placeholder-style="color:red" bindinput="getnum"></input>
+<button bindtap="addnums">添加</button>
+<button bindtap="deletenums">删除</button>
+<view>数组如下:{{list}}</view>

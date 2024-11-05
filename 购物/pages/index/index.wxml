@@ -1,0 +1,50 @@
+<view>
+  <!-- 搜索框开始 -->
+  <searchinput></searchinput>
+  <!-- 搜索框结束 -->
+  <!-- 轮播图开始 -->
+  <view class="lunbotu-item">
+    <!-- swiper标签存在默认的宽度和高度
+    为100% *150px -->
+    <!-- image标签也存在默认的宽度和高度
+    为320px * 240px -->
+    <!-- 图片标签有mode属性，widthFix 让图片的标签宽高和图片标签的内容的宽高都等比例的变化 -->
+    <swiper autoplay="{{true}}" indicator-dots="{{true}}">
+      <swiper-item wx:for="{{swiperlist}}" wx:key="id">
+        <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" >
+         <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!-- 分类导航开始 -->
+  <view class="category-item">
+    <!-- 跳转要注意页面是存在于tabbar，要加一个opentype -->
+    <navigator url="/pages/category/category" open-type="switchTab" wx:for="{{categorylist}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}">
+      </image >
+    </navigator>
+  </view>
+  <!-- 分类导航结束 -->
+  <!-- 楼层开始 -->
+  <view class="floor-item" >
+    <view class="floor-group" wx:for="{{floorlist}}" wx:for-item="item1"
+    wx:for-index="index1" wx:key="floor_title"
+    >
+    <!-- 标题 -->
+    <view class="floor-title">
+      <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+    </view>
+    <!-- 内容 -->
+    <view class="floor-content">
+     <navigator wx:for="{{item1.product_list}}" wx:for-item="item2"
+     wx:for-index="index2" wx:key="name" url="/pages/category/category" open-type="switchTab"
+     >
+       <image mode="{{index2===0? 'widthFix': 'scaleToFill'}}" src="{{item2.image_src}}"></image>
+     </navigator>
+    </view>
+  </view>
+  </view>
+  <!-- 楼层结束 -->
+</view>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 优先级公示:从小到大
+    继承 通配符选择器 标签选择器 类选择器 id选择器 行内样式 !important 继承优先级最低-->
+    <!-- !important用法:
+     在样式属性值的后面分号前面加 -->
+    <!-- 复合选择器权重叠加计算公式 行内样式 id选择器 类选择器 标签选择器,依次比较,谁大看谁 -->
+    <!-- 盒子模型的自动内减 box-sizing:border-box 此时width height就是盒子内容的实际大小-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            line-height: 1;
+            /* 行高和文字大小相同,去除行高到来的默认间隙 */
+        }
+        .box{
+            width: 500px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 41px 30px 0;
+            box-sizing: border-box;
+        }
+        .box h2{
+            height: 41px;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 30px;
+        }
+        .box ul{
+            list-style: none;
+        }
+        .box ul li{
+            height: 50px;
+            padding-left: 30px;
+            border-bottom: 1px dashed #ccc;
+            line-height: 50px;
+        
+        }
+        .box ul a{
+            text-decoration: none;
+            font-size: 19px;
+            color:#666;
+        }
+        /* P标签默认有上下margin ul标签默认有上下的margin 和padding-left  body标签存在默认margin 8px 
+        通配符去除或者用并集选择器去除*/
+        /* 垂直布局的块集元素 上下margin会合并 */
+        /* margin塌陷现象 互相嵌套的块集元素 子元素margin-top会作用在父元素
+        解决:1父子元素分隔 额外设置border padding 内容
+        2 给父元素设置overflow:hidden
+        3 转换成行内块元素
+        4 浮动 */
+
+        /* 行内元素水平方向margin padding有效 垂直方向margin padding无效 */
+    </style>
+  </head>
+  <body>
+      <div class="box">
+          <h2>最新文章 new articles</h2>
+          <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+          </ul>
+      </div>
+  </body>
+</html>

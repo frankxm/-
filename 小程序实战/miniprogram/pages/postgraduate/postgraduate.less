@@ -1,0 +1,80 @@
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+    .cates_container{
+        // less中使用calc~''就不会编译''里面的内容
+        height: ~'calc( 100vh - 90rpx )';
+        display: flex;
+        .left_menu{
+            flex: 2;
+         .item_menu{
+             height: 80rpx;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 30rpx;
+            //  每一个显示的框设为高度一定 伸缩盒子 文字水平居中 文字垂直居中 字体大小一定
+         }
+         .active{
+             color: var(--themeColor);
+             border-left: 5rpx solid currentColor;
+         }
+        }
+        .right_content{
+            flex:5;
+            .item_group{
+                .goods_title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 80rpx;
+                    .delimiter{
+                        color: #ccc;
+                        padding: 0 10rpx;
+                    }
+                    .title{
+
+                    }
+                }
+                .goods_list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    // 商品列表的容器 伸缩盒子 换行效果
+                    navigator{
+                        width: 100%;
+                        text-align: center;
+                        // 链接中内容水平居中
+                        image{
+                            width: 60%; 
+                            max-height: 185rpx;
+                        }
+                    }
+                }
+            }
+         
+        }
+    }
+}
+/* 搜索区域 */
+.searchroot{
+    background:#ffb985;
+    padding:10rpx;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+  }
+  .searchinput{
+    background:white;
+    text-align:center;
+    border-radius: 30rpx;
+    flex:1;
+    margin-left: 20rpx;
+   
+  }
+  .searchicon{
+    width: 60rpx;
+    height: 60rpx;
+  }
+

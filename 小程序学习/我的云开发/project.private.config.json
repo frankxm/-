@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "商品详情页",
+          "pathName": "pages/demo/demo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情页",
+          "pathName": "pages/demo1/demo1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品列表页",
+          "pathName": "pages/demo1/demo1",
+          "query": "id=b00064a760ef93c8276bcde0076b6dd6",
+          "scene": null
+        },
+        {
+          "name": "商品详情页",
+          "pathName": "pages/demo1/demo1",
+          "query": "id=b00064a760ef93c8276bcde0076b6dd6",
+          "scene": null
+        },
+        {
+          "name": "商品详情页",
+          "pathName": "pages/demo1/demo1",
+          "query": "id=cbddf0af60eda4001699189353a35d39",
+          "scene": null
+        },
+        {
+          "name": "云存储",
+          "pathName": "pages/yunsave/yunsave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品列表页",
+          "pathName": "pages/goodslist/goodslist",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

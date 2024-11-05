@@ -1,0 +1,2 @@
+<button bindtap="onLoad">倒计时</button>
+<view>还剩{{time_hour}}时{{time_minute}}分{{time_second}}秒</view>

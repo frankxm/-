@@ -1,0 +1,38 @@
+<!-- 搜索框区域 -->
+<view class="searchroot">
+  <input class="searchinput" placeholder="请输入" placeholder-style="color:grey" bindinput="getdetail" bindconfirm="godetail" confirm-type="search"></input>
+  <image class="searchicon" src="../../images/search.png" bindtap="godetail"></image>
+</view>
+<!-- 轮播图区域 -->
+<swiper class="father" indicator-dots="true" indicator-active-color="red" autoplay interval="2000">
+  <swiper-item wx:for="{{imagelist}}" wx:key="_id">
+    <image src="{{item.picture}}" class="img_item"></image>
+  </swiper-item>
+</swiper>
+<!-- 九宫格区域 -->
+<view class="category_root">
+  <view class="category_item" bindtap="click1">
+    <image class="category_item_image" src="../../images/school.png"></image>
+    <text class="category_item_text">院校</text>
+  </view>
+  <view class="category_item" bindtap="click4">
+    <image class="category_item_image" src="../../images/policy_2.png"></image>
+    <text class="category_item_text">政策</text>
+  </view>
+</view>
+<!-- 热门推荐 -->
+<view>
+  <!-- 标题区域 -->
+  <view class="hop_tip">
+    <text class="hop_tip_title">热门学校推荐</text>
+    <text class="hop_tip_more" bindtap="go">更多></text>
+  </view>
+  <!-- 热门学校列表 -->
+  <view wx:for="{{hotlist}}" wx:key="school_name" class="hot_item" bindtap="enterschool" data-id="{{item._id}}" data-database_name="{{item.country_database}}">
+    <image wx:if="{{item.school_picture[0]}}" src="{{item.school_picture[0]}}"  class="hot_image_item"></image>
+    <view class="title_view">
+      <view class="title_item">{{item.school_name}}</view>
+      <view class="view_item">点击量:{{item.viewnum}}</view>
+    </view>
+  </view>
+</view>

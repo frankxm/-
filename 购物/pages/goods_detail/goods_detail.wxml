@@ -1,0 +1,55 @@
+<view class="detail_swiper">
+    <swiper 
+    autoplay="{{true}}" indicator-dots="{{true}}"
+    circular="{{true}}">
+        <swiper-item 
+        wx:for="{{goods_obj.pics}}"
+        wx:key="pics_id"
+        bindtap="handleimage" data-url="{{item.pics_mid}}">
+           <image mode="widthFix" src="{{item.pics_mid}}"> 
+           </image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="goods_price">${{goods_obj.goods_price}}</view>
+    <view class="goods_name_row">
+        <view class="goods_name">{{goods_obj.goods_name}}</view>
+        <view class="goods_collect" bindtap="handlecollect">
+            <!-- 收藏图标,styles文件中导入的 -->
+            <text class="iconfont {{iscollect?'icon-shoucang':'icon-shoucang1'}}"></text>
+            <view class="collect_text" >收藏</view>
+        </view>
+    </view>
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content">
+        <!-- 富文本 -->
+        <rich-text  nodes="{{goods_obj.goods_introduce}}">
+            
+        </rich-text>
+    </view>
+</view>
+<view class="btm_tool">
+    <view class="tool_item">
+        <view class="iconfont icon-kefu"></view>
+        <view >客服</view>
+        <button open-type="contact"></button>
+    </view>
+    <view class="tool_item">
+        <view class="iconfont icon-fenxiang"></view>
+        <view >分享</view>
+        <button open-type="share"></button>
+    </view>
+    <!-- 购物车为超链接，跳转到tabbar页面，需要增加open-type属性 -->
+    <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+        <view class="iconfont icon-gouwuche"></view>
+        <view >购物车</view>
+    </navigator>
+    <view class="tool_item btn_cart" bindtap="handlecart">
+        加入购物车
+    </view>
+    <view class="tool_item btn_buy">
+        立即购买
+    </view>
+</view>
+    

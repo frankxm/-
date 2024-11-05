@@ -1,0 +1,299 @@
+
+/* 默认样式清除 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 內减模式,撑大盒子 */
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+/* li小圆点清除 */
+a {
+    text-decoration: none;
+}
+/* a下划线清除 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table; 
+  }
+  .clearfix:after {
+    clear:both;
+  }
+  /* 清除浮动 */
+
+  /* 首页的样式 */
+body{
+    background-color: #f3f5f7;
+}
+/* 版心格式 */
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    margin: 30px auto;
+    /* margin: 30px 0; */
+    /* 这个写法左右0将版心的margin:0 auto 左右的auto覆盖了,header在wrapper之前，会覆盖 */
+    height: 42px;
+}
+h1{
+    float: left;
+}
+.nav{
+    float: left;
+    margin-left: 70px;
+    height: 40px;
+}
+/* h1和div标签并列，要想两标签在一行就要两个都要向左浮动，
+同时文字区域一般不用设定长度，会由文字自动撑开 */
+.nav li{
+    float: left;
+    margin-left: 26px;
+}
+/* nav标签中的li浮动，让文字在一行 */
+.nav li a{
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    /* a是行内的，宽高不生效，需要加inline-block 
+       且li已经浮动过了，所以加block也可以 */
+    padding: 0 9px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav li a:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+.search{
+    float: left;
+    width: 412px;
+    height: 40px;
+    border: #00a4ff 1px solid;
+    margin-left: 59px;
+}
+.search input{
+    float: left;
+    padding-left: 20px;
+    width: 361px;
+    height: 38px;
+    border: 0;
+    /* input不描边 */
+}
+.search input::placeholder{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+/* 控制placeholder字体的样式 */
+.search button{
+    float: left;
+    /* input和button浮动放一行 */
+    width: 49px;
+    height: 40px;
+    background-image:url(../images/btn.png) ;
+    /* 搜索的美化标志用背景图 */
+    border: 0;
+    /* 按钮框不描边 */
+    position: absolute;
+    /* 绝对定位，保证屏幕缩放时搜索背景图片不掉下去 */
+}
+.user{
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    line-height: 42px;
+    /* 文居中
+    用户名称长度不一，不设宽 */
+}
+.user img{
+    vertical-align: middle;
+    /* 图居中,调节图片垂直对齐方式居中 */
+}
+.banner{
+    background-color: #1c036c;
+    height: 420px;
+}
+/* 两个创建的类之间加空格 */
+.banner .wrapper{
+    background-image: url(../images/banner2.png);
+    height: 420px;
+}
+.banner .left{
+    padding: 0 20px;
+    float:left;
+    height: 420px;
+    width: 190px;
+    background-color:rgb(0,0,0,0.3);
+    /* 行高属于控制文字的属性，可以继承 */
+    line-height: 44px;
+}
+.banner .right{
+    float: right;
+    height:300px;
+    width: 228px;
+    margin-top: 50px;
+    background-color: #fff;
+}
+.banner .left span{
+    float: right;
+}
+.banner .left a{
+    color:#fff;
+    font-size: 14px;
+}
+.banner .left a:hover{
+    color:#00a4ff
+}
+.banner .right h2{
+    background-color: #9bceea  ;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.banner .right .content{
+    padding: 0 18px;
+}
+.banner .right .content dl{
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+.banner .right .content dt{
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.banner .right .content dd{
+    font-size: 14px;
+    color: #4e4e4e;   
+}
+.banner .right .more{
+    /* more类在a中，a中宽高不生效，需要加block/inline-block 把a转成块div标签*/
+    display: block;
+    width: 200px;
+    height: 40px;
+    border-color: pink;
+    border: solid 1px #00a4ff;
+    margin: 4px auto;
+    /* 因为上面block将a转成块标签，所以可以通过左右auto将盒子居中 */
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    color: #00a4ff;
+}
+.goods{
+    padding-left: 34px;
+    padding-right: 26px;
+    margin-top: 8px;
+    height: 60px;
+    line-height: 60px;
+    border-color: #fff;
+    /* 底框阴影 */
+    box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+}
+.goods h2{
+    float: left;
+}
+.goods li{
+    float: left;
+}
+.goods ul{
+    float: left;
+    margin-left: 30px;
+}
+.goods .interest{
+    float: right;
+    color: #00a4ff;
+    font-size: 14px;
+}
+.goods li a{
+    border-left: 1px solid #bfbfbf;
+    font-size: 16px;
+    color:#050505;
+    padding:0 30px;
+}
+/* border-left和padding加到a中，因为a中有字，a和字一个高度，li比a高 */
+.course{
+    margin-top: 35px;
+
+}
+.course .title{
+    padding: 10px 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.course .title h2{
+    float: left;
+    font-size: 20;
+    font-weight: 400;
+    color: #494944;
+}
+.course .title a{
+    float: right;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+.course .content{
+    margin-top: 30px;
+}
+.course .content li{
+    float: left;
+    background-color: #fff;
+    width: 228px;
+    height: 270px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.course .content li:nth-child(5n){
+    margin-right: 0;
+}
+.course .content li h3{
+    padding: 20px;
+    font-weight: 400;
+    color: #050505;
+    font-size: 14px;
+}
+.course .content li p{
+    padding: 0 20px;
+    font-size: 12px;
+    color: #999;
+}
+.course .content li span{
+    color:#ff7c2c;
+}
+.footer{
+    margin-top: 40px;
+    height: 417px;
+    background-color: #fff;
+    padding-top: 30px;
+}
+.footer  .left{
+    float: left;
+}
+.footer .left p{
+    margin:20px 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+.footer .left a{
+    /* a无法生效宽高加block */
+    display: block;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    color: #00a4ff;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+}
+.footer  .right{
+    float: right;
+}
+.footer .right dl{
+    float: left;
+    margin-left: 120px;
+}

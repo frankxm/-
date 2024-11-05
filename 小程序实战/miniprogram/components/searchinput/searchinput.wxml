@@ -1,0 +1,4 @@
+<view class="searchinput-item">
+    <navigator url="/pages/search/search" open-type="navigate">搜索</navigator>
+    <!-- 跳转到非tabbar页面 -->
+</view>

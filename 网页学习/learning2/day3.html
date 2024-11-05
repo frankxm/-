@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<style>
+    /* justify-content属性有三种 center space-between space-evenly space-around*/
+    /* center表示沿主轴居中排列,space-between表示中间盒子有间距，两边无，space-evenly表示
+    盒子每边间距相同，space-around表示盒子中间的的间距是两边的两倍 */
+    /* align-items属性有两种 center stretch
+    center表示沿侧轴居中 stretch表示默认状态下，即不给子盒子设高度情况下，对子盒子拉伸直至铺满父盒子 */
+    /* align-self表示对子盒子中单独某个盒子进行侧轴调整,需要选择某个盒子  */
+    /* 弹性盒子不给宽则有内容撑开，如果不给高则默认拉伸状态撑满盒子 */
+    /* flex表示伸缩比，子级占据父级位置的份数 */
+    /* flex-wrap:wrap 表示当前根据能容纳的盒子数量进行换行,不进行挤压 nowrap即不换行 */
+    /* align-content调整行对齐方式,参数同justify-content */
+    body {
+    background-color: #f7f7f8;
+    padding-bottom: 80px;
+}
+
+/* 公共样式 */
+.red {
+    color: #cf4444;
+}
+
+.pannel {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* 主体内容 */
+.main {
+    /* 80px: 为了内容不被底部区域盖住 */
+    padding: 12px 11px ;
+}
+
+/* 用户信息 */
+.user_msg {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 11px;
+}
+
+.user_msg .location {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+/* 去掉左边和右边盒子中间占据剩下的一份 */
+.user_msg .user {
+    flex: 1;
+}
+
+.user_msg .user .top {
+    display: flex;
+    align-items: center;
+}
+
+.user_msg .user .top h5 {
+    width: 55px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.user_msg .user .top p {
+    font-size: 13px;
+}
+
+.user_msg .user .bottom {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.user_msg .more {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    background-color: #808080;
+}
+/* 主体内容 */
+
+/* 底部支付 */
+.pay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    /* 主轴对齐方式 */
+    justify-content: space-between;
+    /* 侧轴对齐方式 */
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 11px;
+    /* background-color: pink; */
+    border-top: 1px solid #ededed;
+}
+
+.pay .left {
+    font-size: 12px;
+}
+
+.pay .left i {
+    font-size: 20px;
+}
+
+.pay .right a {
+    display: block;
+    width: 90px;
+    height: 35px;
+    background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+    color: #fff;
+}
+.goods{
+    display: flex;
+    padding: 11px 0 11px 11px;
+}
+.goods a{
+    display: block;
+    width: 70px;
+    height: 85px;
+    margin-right: 10px;
+}
+.goods .info{
+    flex: 1;
+}
+.goods .count{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    background-color: pink;
+}
+.goods .info h5 {
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+.goods .info p {
+    width: 95px;
+    height: 20px;
+    margin: 5px 0;
+    background-color: #f7f7f8;
+    font-size: 12px;
+    color: #888;
+}
+
+.goods .info p span:first-child {
+    margin-right: 5px;
+}
+
+.goods .info .price {
+    font-size: 12px;
+}
+
+.goods .info .price i {
+    font-size: 16px;
+}
+
+.goods .info .price span:last-child {
+    margin-left: 5px;
+    color: #999;
+    /* 横杠，用于商品打折前价格 */
+    text-decoration: line-through;
+}
+/* 其他信息 */
+.rest {
+    padding: 15px;
+}
+
+.rest div {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.rest div:last-child {
+    margin-bottom: 0;
+}
+
+/* 找到第一个和第三个div设置主轴对齐方式 */
+.rest div:nth-child(2n+1) {
+    justify-content: space-between;
+}
+
+/* 第二行标题和p之间的距离 */
+.rest div:nth-child(2) h5 {
+    margin-right: 20px;
+}
+
+.rest h5,
+ .rest p{
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+.rest div:nth-child(2) p {
+    font-size: 12px;
+    color: #989898;
+}
+</style>
+<body>
+    <!-- 主体内容: 滑动查看 -->
+    <div class="main">
+        <!-- 用户信息 -->
+        <div class="pannel user_msg">
+            <div class="location">
+                <i class="iconfont icon-fenxiang1"></i>
+            </div>
+            <div class="user">
+                <div class="top">
+                    <h5>林丽</h5>
+                    <p>18500667882</p>
+                </div>
+                <div class="bottom">北京市  海淀区  中关村软件园   信息科技大厦1号
+                    楼410#   </div>
+            </div>
+            <div class="more">
+                <a href="">          
+                <i class="iconfont icon-more"></i></a>   
+            </div>
+        </div>
+    </div>
+        <!-- 商品 -->
+        <div class="pannel goods">
+            <div class="pic">
+                <a href="#"><img src="./images/1.png" alt=""></a>
+            </div>
+            <div class="info">
+                <h5>康尔贝 非接触式红外体温仪 
+                    领券立减30元 婴儿级材质 测温…</h5>
+                <p><span>粉色</span>   <span>红外体温计</span></p>
+                <div class="price">
+                    <span class="red">¥ <i>266</i> </span>
+                    <span>¥299</span>
+                </div>
+            </div>
+            <div class="count">
+                <i class="iconfont icon-x"></i>
+                <span>1</span>
+            </div>
+        </div>
+
+        <!-- 其他信息 -->
+        <!-- div.pannel   rest   -->
+        <!-- header  nav  section footer 移动端标签这些都可以用-->
+        <section class="pannel rest">
+            <div>
+                <h5>配送方式</h5>
+                <p>顺丰快递</p>
+            </div>
+            <div>
+                <h5>配送方式</h5>
+                <p>顺丰快递</p>
+            </div>
+            <div>
+                <h5>配送方式</h5>
+                <p>顺丰快递</p>
+            </div>
+            
+        </section>
+    <!-- 底部支付: 固定定位 -->
+    <div class="pay">
+        <div class="left">
+            合计: <span class="red">￥<i>266.00</i></span>
+        </div>
+        <div class="right">
+            <a href="#">去支付</a>
+        </div>
+    </div>
+
+</body>
+</html>

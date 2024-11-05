@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* html默认高度不和浏览器一样大，保证百分百 */
+html{
+    height: 100%;
+}
+/* 给body加背景图 */
+body{
+    /* 继承浏览器高度 */
+    height: 100%;
+    /* no-repeat复合属性，不平铺，只显示一个背景图 */
+    /* center 0 水平垂直居中 */
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    /* background-size缩放背景图，contain保证宽最大缩放 */
+    /* background-size: contain; */
+    /* cover保证高最大缩放 */
+    background-size: cover;
+}
+.cloud img{
+    position: absolute;
+    left: 50%;
+    top:20px;
+}
+.cloud img:nth-child(1){
+    margin-left: -300px;
+    animation: cloud_move 1s infinite alternate linear;
+}
+.cloud img:nth-child(2){
+    margin-left: 300px;
+    margin-top: 50px;
+    animation: cloud_move 1s infinite alternate linear 0.5s;
+}
+.cloud img:nth-child(3){
+    margin-left: -500px;
+    margin-top: 180px;
+    animation: cloud_move 1s infinite alternate linear 0.7s;
+}
+@keyframes cloud_move {
+    to{
+        transform: translateX(30px);
+    }
+}

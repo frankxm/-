@@ -1,0 +1,4 @@
+<view wx:for="{{list}}">
+<view class="son">id:{{item._id}},number:{{item.number}}
+</view>
+</view>

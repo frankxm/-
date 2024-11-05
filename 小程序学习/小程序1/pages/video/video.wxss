@@ -1,0 +1,5 @@
+/* pages/video/video.wxss */
+.adjective{
+  text-align: center;
+  background: chartreuse;
+}

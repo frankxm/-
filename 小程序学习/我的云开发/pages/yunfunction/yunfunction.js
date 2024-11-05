@@ -1,0 +1,19 @@
+Page({
+  data:{
+    open_id:""
+  },
+  onLoad(){
+    wx.cloud.callFunction({
+      name:"getData"
+    })
+    .then(res=>{
+      console.log("调用成功",res)
+      this.setData({
+        open_id:res.result.openid
+      })
+    })
+    .catch(err=>{
+      console.log("调用失败",err)
+    })
+  }
+})

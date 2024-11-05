@@ -1,0 +1,5 @@
+<view class="up_img_wrap">
+    <!-- 在标签中使用父元素传递过来的src属性 -->
+    <image src="{{src}}"></image>
+    <icon type="clear" color="red" size="15" />
+</view>

@@ -1,0 +1,82 @@
+
+.user_info_wrap {
+  height: 50vh;
+  overflow: hidden;
+  background-color:#ffb985;
+  position: relative;
+}
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  height: 50vh;
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute ;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  color:rgb(34, 33, 33);
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.user_info_wrap .user_img_wrap .user_info .user_out {
+  color:rgb(34,33, 33);
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+.user_info_wrap .user_btn {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(34, 33, 33);
+  font-size: 38rpx;
+  border: rgb(34, 33, 33) solid 1rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+.right_arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  position: absolute;
+  right: 15px;
+  /* margin-left: 66%; */
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.item{
+  font-size: 38rpx;
+  display: flex;
+  padding:25rpx;
+  padding-left: 50rpx;
+  background:white;
+  align-items:center;
+  border-bottom:gray solid 1rpx;
+}
+/* 关键去除边框 */
+button{
+  width:100%;
+  background: white;
+  border:none;
+  text-align:left;
+  padding:0px;
+  margin:0px;
+  line-height: 1.3;
+  font-size:16px;
+}
+button::after{
+  border:none;
+  border-radius: 0;
+}

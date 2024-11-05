@@ -1,0 +1,96 @@
+page {
+  background: aliceblue;
+}
+.father {
+  height: 500rpx;
+}
+/* 搜索区域 */
+.searchroot {
+  background: #ffb985;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchinput {
+  background: white;
+  text-align: center;
+  border-radius: 30rpx;
+  flex: 1;
+  margin-left: 20rpx;
+}
+.searchicon {
+  width: 60rpx;
+  height: 60rpx;
+}
+.img_item {
+  width: 100%;
+}
+/* 九宫格区域 */
+.category_root {
+  display: flex;
+  height: 200rpx;
+  .category_item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .category_item_image {
+      width: 150rpx;
+      height: 150rpx;
+    }
+    .category_item_text {
+      font-size: 35rpx;
+      font-weight: 550;
+    }
+  }
+}
+
+/* 热门推荐区域 */
+.hop_tip {
+  color: #ffb985;
+  display: flex;
+  justify-content: space-between;
+}
+.hop_tip_title {
+  font-size: 50rpx;
+  margin-left: 30rpx;
+}
+.hop_tip_more {
+  padding-right: 15rpx;
+  padding-left: 30rpx;
+}
+.hot_item {
+  display: flex;
+  padding: 20rpx 30rpx 10rpx 20rpx;
+  margin: 0 10rpx 0 0;
+  .hot_image_item {
+    width: 400rpx;
+    height: 240rpx;
+    min-width: 400rpx;
+  }
+  .title_view{
+    padding: 10rpx;
+    .view_item {
+      color: gray;
+      font-size: 20rpx;
+      margin-left: 10rpx;
+    }
+    .title_item {
+      width: 300rpx;
+      // 内容太长进行省略,多行文本溢出隐藏
+      display: -webkit-box;
+      overflow: hidden; //多出的隐藏
+      -webkit-box-orient: vertical; //设置对齐模式
+      -webkit-line-clamp: 2; //规定两行
+      text-overflow: ellipsis; //多出的省略号代替
+      font-size: 35rpx;
+    }
+  }
+}
+
+
+
+

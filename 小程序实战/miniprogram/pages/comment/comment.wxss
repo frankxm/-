@@ -1,0 +1,204 @@
+page {
+  background-color: #f3f4f6;
+}
+.comment_wrap {
+  padding: 30rpx 25rpx;
+}
+.comment_wrap .comment_content {
+  border-bottom: gray 1rpx solid;
+  padding: 20rpx 15rpx;
+}
+.comment_wrap .comment_content .comment_item .rich-text_item {
+  text-indent: 2em;
+  font-size: 35rpx;
+}
+.comment_wrap .title_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment_wrap .title_item .icon-iconfontpinglun {
+  font-weight: 800;
+}
+.comment_wrap .title_item .title {
+  text-shadow: 10rpx 4rpx #a09d9d;
+  font-size: 55rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+}
+.comment_wrap .display {
+  margin-bottom: 30rpx;
+  background-color: #f3f4f6;
+}
+.comment_wrap .display .user_display {
+  display: flex;
+}
+.comment_wrap .display .user_display .user_info {
+  margin-top: 10rpx;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comment_wrap .display .user_display .user_info .user_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.comment_wrap .display .user_display .user_info .user_name {
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.comment_wrap .display .user_display .display_box {
+  width: 100%;
+  padding: 15rpx;
+  flex: 7;
+}
+.comment_wrap .display .user_display .display_box .display_text {
+  font-size: 38rpx;
+  width: 85%;
+  word-break: break-all;
+  margin-top: 10rpx;
+}
+.comment_wrap .display .user_display .display_box .display_img {
+  max-width: 85%;
+}
+.comment_wrap .display .tool {
+  margin-left: 30vw;
+  display: flex;
+  width: 60vw;
+}
+.comment_wrap .display .tool .tool_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  position: relative;
+}
+.comment_wrap .display .tool .tool_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.comment_wrap .display .tool .tool_item .active {
+  color: var(--themeColor);
+}
+.comment_wrap .display .tool .tool_item .supportnum {
+  margin-left: 10rpx;
+}
+.comment_wrap .display .tool .tool_item:nth-child(1) {
+  margin-right: 10rpx;
+}
+.comment_wrap .more {
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment_wrap .more .more_item {
+  font-weight: 1000;
+  font-style: italic;
+}
+.comment_wrap .modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.comment_wrap .modal-dialog {
+  width: 80vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  margin: -180rpx 80rpx;
+  border-radius: 36rpx;
+}
+.comment_wrap .modal-dialog .fb_main {
+  padding: 20rpx;
+  background-color: #f3f4f6;
+  height: 100vh;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content {
+  height: 75%;
+  background-color: #fff;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content textarea {
+  height: 85%;
+  width: 100%;
+  padding: 10rpx;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content .fb_tool {
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content .fb_tool button {
+  margin: 0;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 60rpx;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  color: #ccc;
+  margin-top: 20rpx;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content .fb_tool .up_img_item {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.comment_wrap .modal-dialog .fb_main .fb_content .fb_tool .remove_tips {
+  color: gray;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment_wrap .modal-dialog .fb_main .form_button {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.comment_wrap .modal-dialog .fb_main .form_button button {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  display: flex;
+}
+.comment_wrap .modal-dialog .fb_main .form_button button .icon_item {
+  margin-left: 10rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.comment_wrap .modal-dialog .fb_main .form_button button .submit_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

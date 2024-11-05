@@ -1,0 +1,4 @@
+/* pages/database/database.wxss */
+input{
+  border:1rpx solid grey;
+}

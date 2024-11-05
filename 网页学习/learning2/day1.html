@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标使用</title>
+    <!-- 复杂的图标用CSS精灵图，简单的用文字图标，灵活性高、体积小、渲染速度快、兼容所有浏览器 -->
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+    *{
+        /* 清除标签默认内外边距 */
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        /* 清除小圆点 */
+        list-style: none;
+    }
+    a{
+        /* 清除颜色和下划线 */
+        color:#333;
+        text-decoration:none;
+    }
+    img{
+        width:100%;
+    }
+    .nav{
+        width:200px;
+        margin: 50px auto;
+        font-size: 12px;
+    }
+    .father{
+        position:relative;
+        width:500px;
+        height:300px;
+        margin:100px auto;
+        border: 1px solid black;
+    }
+    .son{
+        /* 子绝父相，盒子右移下移动一半 */
+        position: absolute;
+        left:50%;
+        top:50%;
+        /* 再将其移动到中心 margin-left margin-top分别为负宽高一半 */
+        margin-left: -100px;
+        margin-top: -50px;
+
+        background-color: pink;
+        width:200px;
+        height:100px;
+        /* 过渡属性，改变子盒子变化过程 */
+        transition:all 0.5s;
+    }
+    /* 鼠标移动到父盒子，子盒子使用伪属性 */
+    .father:hover .son{
+        transform: translate(50px,100px);
+        /* 可以给定子盒子百分比 */
+        transform: translate(20%,100%);
+        /* 单独方向 translateX() translateY() */
+    }
+    .box{
+        /* 超出父盒子的隐藏 */
+        overflow:hidden;
+        width: 800px;
+        height: 500px;
+        margin: 0 auto;
+        background:url(./images/1.webp)
+        
+    }
+    /* 左右样式相同，不同的点再写个并集即可 */
+    /* 伪元素为行内显示模式,宽高不生效，需要加浮动 */
+    .box::before,
+    .box::after{
+        content: "";
+        /* 浮动后具有行内块特点，宽高生效*/
+        float:left;
+        /* 这个要的是左半边的背景图 */
+        width: 50%;
+        height:100%;
+        background-image: url(./images/2.jpg);
+        transition:all 2s;
+    }
+    .box::after{
+        /* 不一样的在于要右半边的背景图 */
+        background-position: right 0;
+    }
+    /* 鼠标移入box,before左移 */
+    .box:hover::before{
+        transform: translate(-100%);
+    } 
+    /* 鼠标移入box,after右移 */
+    .box:hover::after{
+        transform: translateX(100%);
+    }
+    .rotation img{
+        width:250px;
+        border:1px solid black;
+        transition: all 2s;
+        /* 可以改变旋转中心,需要加到标签本身，不能加到hover */
+        transform-origin:right bottom;
+    }
+    .rotation img:hover{
+        /* 默认为绕着中心旋转 */
+        transform: rotate(360deg);
+        /* transform可以同时添加移动和旋转属性，但是需要先移动后旋转
+        transform: translate() rotate() */
+        /* transform:scale() 缩放 */
+    }
+    .big{
+        width:500px;
+        height: 400px;
+        margin:200px auto;
+        overflow:hidden;
+        position:relative;
+    }
+    .big p{
+        color:#333;
+        padding:10px 10px 0 10px;
+        text-align:center;
+    }
+    .small{
+        position:relative;
+    }
+    .small::after{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -120px;
+        margin-top: -70px;
+        content:'';
+        width:240px;
+        height:140px;
+        background-image: url(./images/3.jpg) ;
+        /* 企业中常用渐变，transparent-rgba
+        transparent,
+        rgba(0,0,0,.6) */
+        /* 一开始最大，鼠标放入变小 */
+        transform: scale(2.5);
+        opacity: 0;
+        transition: all 2s;
+    }
+    /* 鼠标移入li 伪元素变化 */
+    .big li:hover .small:after{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .mask{
+        position:absolute;
+        left:0;
+        top:0;
+        width:500px;
+        height:285px;
+        opacity:0;
+        transition:all 2s;
+        background-image: linear-gradient(
+            transparent,
+            rgba(0,0,0,0.8)
+        )  
+    }
+    .big li:hover .mask{
+        opacity:1
+    }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                        <!-- 字体图标用行内小标签 -->
+    <span class="iconfont icon-fenxiang1"></span>
+    <span >分享</span>
+    <span class="iconfont icon-xihuan"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <!-- 双开门效果 -->
+    <div class="box">
+        <!-- 用css伪元素before after -->
+    </div>
+    <!-- 不同旋转效果 -->
+    <div class="rotation"> <img src="./images/2.jpg" alt="" class="src"></div>
+   
+    <!-- 缩放案例 -->
+    <div class="big">
+        <ul>
+            <li>
+                <div class="small">
+                    <img src="./images/4.jpg" alt="">
+                </div>
+                <p>狗头狗头狗头</p>
+                <!-- 遮罩层,用于背景渐变 -->
+                <div class="mask"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

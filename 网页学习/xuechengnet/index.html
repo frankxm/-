@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成在线</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入css文件 -->
+</head>
+<body>
+    <!-- 网站的首页,所有网站的首页都叫index.html,服务器找首页用这个 -->
+    <!-- header负责头部区域样式，wrapper负责版心 -->
+    <div class="header wrapper">
+        <!-- 标识 -->
+        <h1>
+            <a href="#"><img src="./images/logo.png" alt=""></a>
+        </h1>
+        <!-- 导航 -->
+        <div class="nav">
+            <!-- 导航写法ul>li>a -->
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">职业规划</a></li>
+            </ul>
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" placeholder="请输入">
+            <button></button>
+        </div>
+        <!-- 用户 -->
+        <div class="user">
+            <img src="./images/user.png" alt="">
+            <span>lilei</span>
+            <!-- 换不同名字数据需要标签 -->
+        </div>
+    </div>
+    <!-- 轮播图区域 -->
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h2>我的课程表</h2>
+                <div class="content">
+                    <!-- 有主题有描述dl>dt -->
+                    <dl>
+                        <dt>继续学习-程序语言设计</dt>
+                        <dd>正在学习-使用对象</dd>
+                    </dl>
+                    <dl>
+                        <dt>继续学习-程序语言设计</dt>
+                        <dd>正在学习-使用对象</dd>
+                    </dl>
+                    <dl>
+                        <dt>继续学习-程序语言设计</dt>
+                        <dd>正在学习-使用对象</dd>
+                    </dl>
+                </div>
+                <a href="#" class="more">全部课程</a>
+            </div>
+        </div>
+    </div>
+    <!-- 精品推荐 -->
+    <div class="goods wrapper">
+        <h2>精品推荐</h2>
+        <ul>
+            <li><a href="#">jquery</a></li>
+            <li><a href="#">jquery</a></li>
+            <li><a href="#">jquery</a></li>
+            <li><a href="#">jquery</a></li>
+            <li><a href="#">jquery</a></li>
+            <li><a href="#">jquery</a></li>
+        </ul>
+        <a href="#" class="interest">修改兴趣</a>
+    </div>
+    <!-- 精品推荐课程 -->
+    <div class="course wrapper">
+        <div class="title">
+            <h2>精品推荐</h2>
+            <a href="#">查看全部</a>
+        </div>
+        <!-- 因为子元素li浮动了，所以不能撑开父元素content盒子，
+            所以下面的类会溢出到上面来，需要加清除浮动clearfix,一开始写道 -->
+        <div class="content clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>            <li>
+                    <a href="#">
+                        <img src="./images/course07.png" alt="">
+                        <h3>Think PHP 5.0 博客系统实战项目演练 </h3>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 版权部分 -->
+    <div class="footer ">
+        <div class="wrapper">
+            <!-- left和right类里面都是文字，所以不设置宽高，让文字自动撑起 -->
+            <div class="left">
+                <img src="./images/logo.png" alt="">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
+                    © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                    <a href="#">下载APP</a>
+            </div>
+            <div class="right">
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd><a href="#">
+                        合作机构
+                    </a></dd>
+                    <dd><a href="#">
+                        合作导师
+                    </a></dd>
+                </dl>
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd><a href="#">
+                        合作机构
+                    </a></dd>
+                    <dd><a href="#">
+                        合作导师
+                    </a></dd>
+                </dl>
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd><a href="#">
+                        合作机构
+                    </a></dd>
+                    <dd><a href="#">
+                        合作导师
+                    </a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

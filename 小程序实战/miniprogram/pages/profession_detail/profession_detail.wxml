@@ -1,0 +1,25 @@
+<view class="comment_wrap">
+  <view class="title_item">
+    <view class="title">学校政策变化</view>
+    <view class="iconfont icon-zhengcejiedu"></view>
+  </view>
+  <view class="comment_content">
+    <scroll-view scroll-y="true" style="height:450rpx" class="comment_item">
+      <rich-text nodes="{{school.policy}}" class="policy_item"></rich-text>
+    </scroll-view>
+  </view>
+  <view class="school_video">
+    <view class="video_title">相关视频：</view>
+    <view class="iconfont icon-shipin"></view>
+    <view class="video_item">
+      <video custom-cache="{{false}}"  src="{{school.video}}"></video>
+    </view>
+    <view class="button_wrap">
+      <button type="primary" catchtap="handleDownload" data-link="{{school.video}}">下载视频</button>
+    </view>
+  </view>
+  <navigator bindtap="repetitive_press" class="guidance_wrap" url="/pages/school_detail/school_detail?id={{school._id}}&database_name={{school.country_database}}">
+    <view class="iconfont icon-xuexiaogaikuang"></view>
+    <view class="guidance">点此获取更多学校消息</view>
+  </navigator>
+</view>

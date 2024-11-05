@@ -1,0 +1,147 @@
+@import 'base';
+
+// @rootSize:3.75vw;
+
+@vw: 3.75vw;
+@color: #fb7299;
+
+// 头部 固定
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    // z-index保证头部浮在所有内容最上面，背景颜色保证顶部不透明
+    z-index: 1;
+    background-color: #fff;
+    // 固定定位需要确定宽度
+    width: 100%;
+    // width: 100vw;
+    height: (84 / @vw);
+    
+
+    // top
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: (44 / @vw);
+        padding-left: (18 / @vw);
+        padding-right: (12 / @vw);
+
+        .left {
+            // 一般用iconfont改字号
+            .iconfont {
+                font-size: (28 / @vw);
+                color: @color;
+            }
+        }
+
+        .right {
+            display: flex;
+            .iconfont {
+                font-size: (22 / @vw);
+                color: #ccc;
+            }
+
+            .login {
+                width: (24 / @vw);
+                height: (24 / @vw);
+                margin-left: (24 / @vw);
+            }
+
+            .download {
+                width: (72 / @vw);
+                height: (24 / @vw);
+                margin-left: (24 / @vw);
+            }
+
+        }
+    }
+    // bottom
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        height: (40 / @vw);
+        border-bottom: 1px solid #eee;
+        .more {
+            a {
+                // a为行内标签，不能设置宽高,转显示模式
+                display: block;
+                width: (40 / @vw);
+                height: (40 / @vw);
+                // background-color: pink;
+                text-align: center;
+                line-height: (40 / @vw);
+                // font-size: (22 / @vw);
+                color: #ccc;
+                .iconfont {
+                    font-size: (22 / @vw);
+                }
+            }
+        }
+
+        .tab {
+            ul {
+                display: flex;
+                li {
+                    padding: 0 (16 / @vw);
+                    a {
+                        // a设高度，改变行内标签模式
+                        display: block;
+                        height: (38 / @vw);
+                        line-height: (38 / @vw);
+                        font-size: (14 / @vw);
+                        // 当前点击
+                        &.current {
+                            color: @color;
+                            border-bottom: 2px solid @color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 视频
+.video_content {
+    padding: (84 / @vw) (5 / @vw) 0;
+
+    .video_list {
+        display: flex;
+        // 弹性盒子换行
+        flex-wrap: wrap;
+
+        a {
+            width: 50%;
+            padding: (8 / @vw) (5 / @vw);
+            // background-color: pink;
+            font-size: (12 / @vw);
+
+            .txt {
+                margin-top: (5 / @vw);
+            }
+
+            .pic {
+                position: relative;
+                .count {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: (8 / @vw);
+                    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+                    color: #fff;
+                    i {
+                        // 调字体图标和小字垂直对齐
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

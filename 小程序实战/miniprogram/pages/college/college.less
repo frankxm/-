@@ -1,0 +1,69 @@
+page {
+  background-color: rgb(245, 241, 241);
+}
+.cates_container {
+  background-color: rgb(255, 255, 255);
+  padding: 10rpx;
+  height: 150rpx;
+  .up_menu {
+    display: flex;
+    height: 100%;
+    white-space: nowrap;
+    text {
+      height: 100rpx;
+      margin: 10rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
+    }
+    .active {
+      color: var(--themeColor);
+      border-bottom: 5rpx solid currentColor;
+    }
+  }
+}
+.hot_item {
+  display: flex;
+  padding: 20rpx 20rpx 10rpx 30rpx;
+  .hot_image_item {
+    width: 55vw;
+    height: 240rpx;
+    min-width: 400rpx;
+  }
+  .content_wrap{
+    width: 45vw;
+  .title_item {
+    font-size: 35rpx;
+    margin-left: 10rpx;
+    width: 100%;
+    // 内容太长进行省略,多行文本溢出隐藏
+    display: -webkit-box;
+    overflow: hidden; //多出的隐藏
+    -webkit-box-orient: vertical; //设置对齐模式
+    -webkit-line-clamp: 2; //规定两行
+    text-overflow: ellipsis; //多出的省略号代替
+    }
+
+  .view_item {
+    color: gray;
+    font-size: 20rpx;
+    margin-left: 10rpx;
+    }
+  }
+  }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  .delimiter {
+    color: #ccc;
+    padding: 0 10rpx;
+  }
+
+  .btn_title {
+    font-size: 25rpx;
+    color: gray;
+  }
+}

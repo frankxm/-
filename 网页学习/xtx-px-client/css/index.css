@@ -1,0 +1,263 @@
+/* 放index主页页面的样式 */
+/* 首页轮播图 */
+.banner{
+ 
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .container{
+    height: 500px;
+    position: relative;
+}
+/* banner图是图片不能用浮动，只能用定位的方式
+  背景图的话可以用浮动 */
+.banner .aside{
+    width: 250px;
+	height: 500px;
+	background-color: #000000;
+	opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+.banner .aside a{
+    color: #ffffff;
+    padding-left: 36px;
+    padding-right: 19px;
+    height: 50px;
+    display: block;
+    /* 用block不用inline-block好处是子元素a可以继承父li的宽度 */
+    position: relative;
+}
+.banner .aside a span{
+    font-size: 14px;
+    margin-left: 15px;
+}
+.banner .aside a:hover{
+    background-color: #27ba9b;
+}
+/* 伪类选择器方法，a的子集最后面添加箭头 */
+.banner .aside a::after{
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -40px -110px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.banner .prev{
+    width: 45px;
+	height: 44px;
+	background-color: rgba(0, 0, 0,.2);
+	opacity: 0.2;
+    border-radius: 50%;
+    position: absolute;
+    top: 228px;
+    left: 260px;
+    background-image: url(../images/sprites.png);
+    background-position: 14px -60px;
+}
+.banner .next{
+    width: 45px;
+	height: 44px;
+	background-color: rgba(0, 0, 0,.2);
+	opacity: 0.2;
+    border-radius: 50%;
+    position: absolute;
+    top: 228px;
+    right: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -23px -60px;
+}
+.banner ol{
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    width: 200px;
+    height: 10px;
+   
+}
+.banner ol li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    margin-left: 24px;
+    /* 鼠标放置有点击图标 */
+    cursor: pointer;
+}
+.banner ol .current{
+    background-color: #fff;
+}
+.goods .hd{
+    /* 不设定高，因为可能实际情况增加的物品会增多，让其将盒子撑开 */
+    height: 114px;
+    line-height: 114px;
+
+}
+.goods .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.goods .hd span{
+
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+/* 并集选择器，后面也用 */
+.goods .hd a,.shengxian .hd .more{
+    float: right;
+    color: #999;
+}
+.goods .hd a::after,
+.shengxian .hd .more::after{
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    margin-left: 13px;
+    vertical-align: middle;
+}
+.goods .bd li{
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    float: left;
+    margin-right: 8px;
+    /* li中的内容水平居中 */
+    text-align: center;
+    position: relative;
+}
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+.goods .bd li img{
+    width: 304px;
+}
+.goods .bd li h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.goods .bd li div{
+    color: #9a2e1f;
+    font-size: 14px;
+}
+.goods .bd li div span{
+    font-size: 23px;
+}
+.goods .bd li b{
+    width: 28px;
+    height: 51px;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    border: 1px solid #27ea9b;
+    border-radius: 2px;
+    color: #27ba9b;
+    /* base样式里面有默认行高 */
+    line-height: 24px;
+}
+.shengxian{
+    margin-bottom: 40px;
+}
+.shengxian .hd{
+    height: 96px;
+    line-height: 96px;
+   
+}
+.shengxian .hd ul{
+    float: right;
+    margin-right: 65px;
+}
+.shengxian .hd .more{
+    float: right;
+}
+
+.shengxian .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+.shengxian .hd ul li{
+    float: left;
+}
+.shengxian .hd li a{
+    padding: 2px 7px;
+    margin-left: 6px;
+}
+.shengxian .hd li a:hover{
+    background-color: #27ba9b;
+    color: #fff;
+}
+.shengxian .bd .left{
+    width: 232px;
+    height: 610px;
+    float: left;
+    margin-right: 8px;
+}
+.shengxian .bd .left img{
+    width: 232px;
+    padding-top: 20px;
+}
+.shengxian .bd .right{
+    float: left;
+    width: 1000px;
+    height: 610px;
+ 
+}
+.shengxian .bd .right li{
+    width: 242px;
+    height: 304px;
+
+    float: left;
+    margin-right: 8px;
+    padding: 8px 29px 5px;
+    text-align: center;
+    
+}
+.shengxian .bd .right li:nth-child(4n){
+    margin-right: 0;
+}
+.shengxian .bd .right li:nth-child(-n+4){
+    margin-top: 5px;
+}
+.shengxian .bd .right li:nth-child(n+5){
+    margin-top: 2px;
+}
+.shengxian .bd .right li img{
+    width: 184px;
+}
+.shengxian .bd .right li h3{
+    width: 173px;
+	height: 54px;
+	font-size: 16px;
+	font-weight:400;
+	color: #333333;
+    margin-top: 20px;
+ 
+}
+.shengxian .bd .right li div{
+    float: left;
+    color: #9a2e1f;
+    font-size: 10px;
+}
+.shengxian .bd .right li div span{
+    font-size: 18px;
+
+}

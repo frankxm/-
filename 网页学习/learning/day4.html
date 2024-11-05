@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 后代选择器，在后代中找标签，包括多代 选择器1 选择器2{} */
+      /* 子代选择器，只能选子代 选择器1>子代*/
+      /* 交集选择器，同时满足两个标签 两个标签要紧挨 选择器1.2 */
+      /* 生成标签快捷方法：标签名.类名#id名 */
+      /* hover伪类选择器，鼠标悬停时的样式
+        选择器1:hover */
+      /* 背景图片： background-image:url('') 需要根据图片大小设置盒子，并不会撑满盒子*/
+      a {
+        display: inline-block;
+        text-decoration: none;
+        width: 80px;
+        height: 50px;
+        line-height: 50px;
+        background-color: red;
+        color:#fff;
+        text-align: center;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: yellow;
+      }
+      .box {
+        background-image: url("../images/630\ \(2\).webp");
+        height: 800px;
+        width: 800px;
+        background-repeat: no-repeat;
+        background-color: tomato;
+        background-position: center center;
+      }
+      /* 背景相关属性可以连写 background:color image repeat position */
+
+      /* 块级元素 display:block 独占一行 默认宽度为父元素，高度由内容撑开 */
+      /* 行内元素 display:inline 一行多个 宽度和高度默认由内容撑开 不可设置宽高 
+         行内块元素相比行内元素可以设置宽高*/
+      /* 行内元素可以通过display :block /inline-block转成块元素或者行内块元素 主要为了能够设置宽高 */
+      /* p标签不要嵌套div p h 等块级元素 嵌套后会把p分成上下两个 
+         a标签不能嵌套a */
+      /* 开发中常常给url设置list-style:none来消除默认小圆点属性  或者给body设置统一的font-size来统一不同浏览器文字大小 */
+      /* 继承实效情况：
+      1、a标签的文字颜色继承实效
+      2、h标签的font-size继承实效
+      3、div标签的高度不能继承，宽度因为块级元素显示的缘故有继承的效果 */
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="#">我是一个a标签</a>
+    </p>
+    <div class="box"></div>
+    <br><br><br><br><br>
+    <!-- 行内元素如果代码放在一行则没有间隙，不在一行则有间隙 -->
+    <a href="#">导航0</a>
+    <a href="#">导航1</a>
+    <a href="#">导航2</a>
+    <a href="#">导航3</a>
+    <a href="#">导航4</a>
+  </body>
+</html>

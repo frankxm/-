@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "upimg":"../../components/upimg/upimg"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "评论页"
+}

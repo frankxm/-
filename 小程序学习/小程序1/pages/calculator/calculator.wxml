@@ -1,0 +1,12 @@
+
+<!-- <view>
+<input placeholder="输入框" placeholder-style="color:green" bindinput="getname"></input>
+<text>用户输入的是:{{num}}</text>
+</view> -->
+
+<!-- 计算器 -->
+<input placeholder="输入框" placeholder-style="color:red" bindinput="geta"></input>
+<text>+</text>
+<input placeholder="输入框" placeholder-style="color:red" bindinput="getb"></input>
+<button type="primary" bindtap="getresult">求和</button>
+<text>结果是:{{result}}</text>

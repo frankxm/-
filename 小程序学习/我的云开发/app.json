@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/yunsave/yunsave",
+    "pages/goodslist/goodslist",
+    "pages/search/search",
+    "pages/fenye/fenye",
+    "pages/fenyefunction/fenyefunction",
+    "pages/demo/demo",
+    "pages/diytool/diytool",
+    "pages/gooddetail/gooddetail",
+    "pages/yunfunction/yunfunction",
+    "pages/skip/skip",
+    "pages/database/database",
+    "pages/demo1/demo1",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+
+  
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,32 @@
+<!--四国留学信息-->
+<view>
+<!--英国-->
+<view class="firstcountry">
+<text bindtap="university">学校</text>
+<text bindtap="profession"> 专业</text>
+<text bindtap="entrytime"> 录取时间</text>
+</view>
+<!--意大利-->
+<view class="secondcountry"> 
+专业
+学校
+环境
+</view>
+<!--新加坡-->
+<view class="thirdcountry">
+<view>专业   </view>
+<view>学校   </view>
+<view>环境   </view>
+
+</view>
+<!--澳大利亚-->
+<view class="fourthcountry">
+<view>澳大利亚专业   </view>
+<view> 澳大利亚 学校   </view>
+<view>
+澳大利亚
+环境   
+</view>
+</view>
+
+</view>

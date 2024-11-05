@@ -1,0 +1,4 @@
+<button type="primary" bindtap="chooseimg">上传图片</button>
+<button type="default" bindtap="choosevideo">上传视频</button>
+<image wx:if="{{yes_image}}" src="{{imgurl}}"></image>
+<video wx:if="{{yes_video}}" src="{{videourl}}"></video>

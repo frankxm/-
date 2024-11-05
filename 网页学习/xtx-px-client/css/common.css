@@ -1,0 +1,204 @@
+/* 网站中多个相同模块的重复样式 */
+/* 版心的公共类 */
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/* -------------------快捷菜单模块：xtx-shortcut */
+.xtx-shortcut {
+  height: 52px;
+  background-color: #333333;
+}
+
+.xtx-shortcut .container {
+  height: 52px;
+}
+.xtx-shortcut .container ul{
+  float: right;
+}
+.xtx-shortcut .container li{
+  float: left;
+  line-height: 52px;
+  
+}
+/* 给a加padding和边线，a和文字一样高 */
+.xtx-shortcut .container a{
+  font-size: 14px;
+  color: #dcdcdc;
+  padding: 0 12px;
+  border-right: 1px solid #666;
+}
+/* 要先选择外面的li再选择a删除边线 */
+.xtx-shortcut .container li:last-child a{
+  border-right: none;
+}
+.xtx-shortcut .container a span{
+  display: inline-block;
+  /* span行内元素，宽高不生效要加inline block */
+  width: 11px;
+  height: 16px;
+  background-image: url(../images/sprites.png);
+  background-position: -160px -70px;
+  vertical-align: middle;
+  /* 行内、行内块垂直方向对其 */
+  margin-right: 8px;
+}
+.header {
+  margin: 30px auto;
+  /* 左右auto,保持盒子居中，并且不会覆盖版心 */
+  height: 70px;
+  
+}
+.header .logo{
+  float: left;
+  width: 207px;
+  height: 70px;
+}
+.header .logo h1{
+  width: 207px;
+  height: 70px;
+}
+/* logo搜索引擎优化，用字使得标题易搜索再减小字体 */
+.header .logo h1 a{
+  /* a标签block使宽高生效 */
+  display: block;
+  width: 207px;
+  height: 70px;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  font-size: 0;
+}
+.header .content{
+  float: left;
+  margin-left: 40px;
+  height: 70px;
+}
+.header .content li{
+  float: left;
+  line-height: 70px;
+  margin-right: 48px;
+}
+.header .content a{
+  padding-bottom: 7px;
+}
+.header .content a:hover{
+  color: #27ba9b;
+  border-bottom: 1px solid #27ba9b;
+}
+.header .search{
+  position: relative;
+  float: left;
+  width: 172px;
+  height: 30px;
+  margin-left: 34px;
+  margin-top: 24px;
+  border-bottom: 2px solid #e7e7e7;
+}
+.header .search input{
+  padding-left: 30px;
+  height: 28px;
+  width: 172px;
+}
+.header .search input::placeholder{
+  font-size: 14px;
+  color: #ccc;
+}
+.header .search span{
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/sprites.png);
+  background-position: -79px -69px;
+  position: absolute;
+  left: 2px ;
+  top:0px;
+  /* span行内块元素,但因为绝对定位，宽高依旧生效也可去掉 */
+  display: inline-block;
+}
+.header .cart{
+  position: relative;
+  float: left;
+  width: 23px;
+  height: 23px;
+  margin-left: 15px;
+  background-image: url(../images/sprites.png);
+  background-position: -119px  -69px;
+  margin-top: 28px;
+}
+.header .cart span{
+  /* 因为是绝对定位，所以span宽高生效 */
+  position: absolute;
+  right: -13px;
+  top:-6px;
+  width: 20px;
+	height: 15px;
+	background-color: #e26237;
+	border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+}
+.footer{
+  height: 342px;
+  background-color: #333; 
+}
+.footer .container{
+  width: 1393px;
+}
+.footer .top{
+  padding-top: 59px;
+  padding-left: 135px;
+  height: 175px;
+  border-bottom: 3px solid #434343;
+}
+.footer .top li{
+  position: relative;
+  float: left;
+  width: 195px;
+  height: 58px;
+  line-height: 58px;
+  margin-right: 300px;
+}
+.footer .top li:last-child{
+  margin-right: 0;
+}
+/* 伪元素添加的标签是行内元素 */
+.footer .top li::before{
+  /* display: inline-block;定位的话就不用写这个 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 58px;
+  height: 58px;
+  background-image: url(../images/sprites.png);
+  vertical-align: middle;
+  /* vertical-align /line-height都用之后图文还是无法竖直对齐就用定位 */
+}
+.footer .top  span{
+  font-size: 28px;
+  color: #fff;
+  margin-left: 75px;
+}
+/* 第二个li里面的before添加精灵图位置属性 */
+.footer .top li:nth-child(2)::before{
+  background-position: -64px 0;
+}
+.footer .top li:nth-child(3)::before{
+  background-position: -130px 0;
+}
+.footer .bottom {
+  padding-top: 40px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.footer .bottom a{
+ 
+  font-size: 14px;
+  color: #999;
+}
+.footer .bottom p{
+  margin-top: 20px;
+}

@@ -1,0 +1,192 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "个人中心",
+          "pathName": "pages/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索页",
+          "pathName": "pages/school/school",
+          "query": "searchkey=d",
+          "scene": null
+        },
+        {
+          "name": "搜索页面",
+          "pathName": "pages/school/school",
+          "query": "searchkey=\"",
+          "scene": null
+        },
+        {
+          "name": "院校页面",
+          "pathName": "pages/college/college",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "学校搜索页",
+          "pathName": "pages/school_search/school_search",
+          "query": "searchkey=",
+          "scene": null
+        },
+        {
+          "name": "专业详情页",
+          "pathName": "pages/profession_detail/profession_detail",
+          "query": "school_database=Britain_school&school_id=79550af260f67d64280e43ba194ba525",
+          "scene": null
+        },
+        {
+          "name": "pages/school_detail/school_detail",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id: \"b00064a760f67d2a28cf6a970559e7ad\", database_name: \"Britain_school\"",
+          "scene": null
+        },
+        {
+          "name": "pages/school_detail/school_detail",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=2d44d6c2611a0ff5057774417923e90e&database_name=Italy_school",
+          "scene": null
+        },
+        {
+          "name": "学校详情页",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=b00064a760f92fea295f511d1be07af1&database_name=NewZealand_school",
+          "scene": null
+        },
+        {
+          "name": "我的收藏",
+          "pathName": "pages/collection/collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "评论页面",
+          "pathName": "pages/comment/comment",
+          "query": "_id=b00064a760f92fea295f511d1be07af1&country_database=NewZealand_school",
+          "scene": null
+        },
+        {
+          "name": "政策变化",
+          "pathName": "pages/postgraduate/postgraduate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "写评论页面",
+          "pathName": "pages/writing/writing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "跳转页面",
+          "pathName": "pages/web/web",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "政策详情页",
+          "pathName": "pages/profession_detail/profession_detail",
+          "query": "school_database=Germany_school&_id=14139e126125e90106d686192d32f854",
+          "scene": null
+        },
+        {
+          "name": "school",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=14139e126125e90106d686192d32f854&database_name=Germany_school",
+          "scene": null
+        },
+        {
+          "name": "慕尼黑大学评论",
+          "pathName": "pages/comment/comment",
+          "query": "_id=14139e126135dfc10a1d12ed5b892f24&country_database=Germany_school",
+          "scene": null
+        },
+        {
+          "name": "慕尼黑大学政策变化",
+          "pathName": "pages/profession_detail/profession_detail",
+          "query": "school_database=Germany_school&_id=14139e126125e90106d686192d32f854",
+          "scene": null
+        },
+        {
+          "name": "巴黎高范详情页",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=cd045e756125ea8507a587f60f15e637&database_name=France_school",
+          "scene": null
+        },
+        {
+          "name": "国立新加坡大学详情",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=79550af260f92ecf289d6aa05609667e&database_name=Singapore_school",
+          "scene": null
+        },
+        {
+          "name": "收藏页面",
+          "pathName": "pages/collection/collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "乌索普拉大学详情页",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=2d44d6c26125e94d06de6b6a7df94124&database_name=Sweden_school",
+          "scene": null
+        },
+        {
+          "name": "曼彻斯特大学详情页",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=79550af260f67d64280e43ba194ba525&database_name=Britain_school",
+          "scene": null
+        },
+        {
+          "name": "慕尼黑大学详情页",
+          "pathName": "pages/school_detail/school_detail",
+          "query": "id=14139e126135dfc10a1d12ed5b892f24&database_name=Germany_school",
+          "scene": null
+        },
+        {
+          "name": "慕尼黑大学写评论页",
+          "pathName": "pages/writing/writing",
+          "query": "country_database=Germany_school&_id=14139e126135dfc10a1d12ed5b892f24",
+          "scene": null
+        },
+        {
+          "name": "pages/school_search/school_search",
+          "pathName": "pages/school_search/school_search",
+          "query": "searchkey=",
+          "scene": null
+        },
+        {
+          "name": "慕尼黑大学政策变化",
+          "pathName": "pages/profession_detail/profession_detail",
+          "query": "school_database=Germany_school&_id=14139e126135dfc10a1d12ed5b892f24",
+          "scene": null
+        },
+        {
+          "name": "自定义评论",
+          "pathName": "pages/writing_diy/writing_diy",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

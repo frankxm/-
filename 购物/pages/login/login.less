@@ -1,0 +1,139 @@
+page{
+  background-color: #ededed;
+}
+.user_info_wrap {
+    height: 45vh;
+    // 使图片多出的部分隐藏
+    overflow: hidden;
+    background-color: var(--themeColor);
+    // 父元素相对定位
+    position: relative;
+    .user_img_wrap {
+        // 给外层加相对定位，内层绝对定位，使得小头像在大头像里面
+        position: relative;
+      .user_bg {
+       height: 50vh;
+    //    滤镜使图片变模糊
+    filter: blur(10rpx);
+
+      }
+  
+      .user_info {
+          position:absolute ;
+        //   距离左边50%水平居中
+          left: 50%;
+          transform: translateX(-50%);
+        //   距离顶部30%
+          top:20%;
+        //   文字水平居中
+        text-align: center;
+        .user_icon {
+            width: 150rpx;
+            height: 150rpx;
+            border-radius: 50%;
+        }
+  
+        .user_name {
+            color: #fff;
+            font-size: 30rpx;
+            margin-top: 30rpx;
+        }
+        .user_out{
+            color: #fff;
+            font-size: 20rpx;
+            margin-top: 10rpx;
+        }
+      }
+    }
+    .user_btn{
+        // 子元素绝对定位
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: greenyellow;
+        font-size: 38rpx;
+        border: greenyellow solid 1rpx;
+        padding: 30rpx;
+        border-radius: 10rpx;
+    }
+  }
+.user_content{
+  position: relative;
+  .user_main{
+    padding-bottom: 100rpx;
+    color:#666;
+    position: absolute;
+    width: 90%;
+    // 水平居中
+    left: 50%;
+    transform: translateX(-50%);
+    // 往上移动
+    top:-40rpx;
+    .history_wrap{
+      display: flex;
+      background-color: #fff;
+      navigator{
+        padding: 10rpx 0;
+        flex: 1;
+        text-align: center;
+        .his_num{
+          color: var(--themeColor);
+        }
+        .his_name{
+        }
+      }
+    }
+    .order_wrap {
+      background-color: #fff;
+      margin-top: 30rpx;
+      .order_title {
+        padding: 20rpx;
+        border-bottom: solid 1rpx #ccc;
+      }
+    
+      .order_content {
+        display: flex;
+        navigator {
+          padding: 15rpx 0;
+          flex: 1;
+          text-align: center;
+          .iconfont {
+            color: var(--themeColor);
+            font-size: 40rpx;
+          }
+    
+          .order_name {
+    
+          }
+        }
+      }
+    }
+    .address_wrap {
+      margin-top: 30rpx;
+      background-color: #fff;
+      padding: 20rpx;
+    }
+    .app_info_wrap {
+      background-color: #fff;
+      margin-top: 30rpx;
+      
+      .app_info_item {
+        padding: 20rpx;
+        border-bottom: 2rpx solid #ccc;
+      }
+      // 让“联系客服”和数字分居两侧
+      .app_info_contact{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .recommand_wrap {
+    margin-top: 30rpx;
+    background-color: #fff;
+    padding: 20rpx;
+
+    }
+  }
+}

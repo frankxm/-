@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 无序列表 自动添加黑色小原点-->
+    <h1>水果列表</h1>
+    <ul>
+      <!-- ul标签里面只准放li  -->
+      <!-- 加其他内容需要加到li中 -->
+      <li><p>p标签是我</p></li>
+      <li>
+        榴莲
+        <p>p标签是我</p>
+        <!--自动占一行 -->
+      </li>
+      <li>香蕉</li>
+      <li>苹果</li>
+      <li>哈密瓜</li>
+      <li>火龙果</li>
+    </ul>
+    <!-- 有序列表 自动添加序号-->
+    <ol>
+      <li>第一名100</li>
+      <li>第二名:80</li>
+      <li>第三名:60</li>
+    </ol>
+    <!-- 标签要求同上 -->
+
+    <!-- 自定义列表 dt表示主题 dd表示每一项解释说明 -->
+    <dl>
+      <!-- 默认dd缩进 -->
+      <dt>帮助中心</dt>
+      <dd>账户管理</dd>
+      <dd>购物指南</dd>
+      <dd>订单操作</dd>
+    </dl>
+    <!-- dt dd可以放任意内容 -->
+
+    <table border="1" width="300" height="300">
+      <caption><h3>表格标题</h3></caption>
+      <thead>
+        <tr>
+          <th>表头单元格1</th>
+          <th>表头单元格2</th>
+          <th>表头单元格3</th>
+          <!-- th替换td 表示表头单元格 -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- 1保留格子延伸至7 -->
+          <td rowspan="2">1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <!-- 8保留，格子延伸至9 -->
+          <td colspan="2">8</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- thead tfoot 较窄，tbody较宽 书写位置包含tr行
+    不能跨结构标签合并-->
+    <!-- 文本框可以设置value name 属性value设为空表示将输入的内容给value然后发送到
+后台，name为一个属性,用于告诉后台接收的value是什么数据 -->
+    <form>
+      昵称:<input type="text" /><br /><br />
+      <!-- 换了两行 -->
+      密码:<input type="password" /><br />
+      <!-- name用于单选的分组 checked默认选中 -->
+      性别：<input type="radio" name="sex" checked />男<input
+        type="radio"
+        name="sex"
+      />女<br />
+      爱好：<input type="checkbox" />敲代码<br />
+      <input type="file" multiple /><br /><br />
+      <input type="submit" /><input type="reset" />
+      <input type="button" value="普通按钮" />
+    </form>
+    <!-- button标签同input submit reset button -->
+    <!-- 按钮实现配合form -->
+
+    所在城市：<select>
+      <option>北京</option>
+      <option>上海</option>
+      <option selected>广州</option>
+      <option>深圳</option>
+    </select>
+    <br /><br />
+    <!-- 两种方法让用户点击范围广 -->
+    <input type="checkbox" id="one" /><label for="one">敲代码</label>
+
+    <label> <input type="checkbox" />学习 </label>
+    <br />
+    <!-- html有空格合并现象，多个空格变为一个,要实现多个空格需要用字符实体 -->
+    1234&nbsp;&nbsp;&nbsp;111111111
+    <br><br><br>
+    
+  </body>
+</html>

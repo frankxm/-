@@ -1,0 +1,47 @@
+/* 搜索区域 */
+.searchroot{
+  background:#ffb985;
+  padding:10rpx;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
+.searchinput{
+  background:white;
+  text-align:center;
+  border-radius: 30rpx;
+  flex:1;
+  margin-left: 20rpx;
+ 
+}
+.searchicon{
+  width: 60rpx;
+  height: 60rpx;
+}
+/* 数据呈现区域 */
+.hot_item{
+  display: flex;
+  margin-top: 20rpx;
+}
+.big_text_item{
+  display: flex;
+  padding: 10rpx 20rpx 15rpx ;
+}
+.hot_image_item{
+  width:400rpx;
+  height: 240rpx;
+  min-width: 400rpx;
+}
+.view_item{
+  color:gray;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+}
+.title_item{
+  margin-left: 10rpx;
+  width: 350rpx;
+  /* 超过一行省略号 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

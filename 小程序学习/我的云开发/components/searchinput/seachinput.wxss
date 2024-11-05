@@ -1,0 +1,10 @@
+.searchinput_index{
+  height: 90rpx;
+  padding: 10rpx;
+}
+ .navigator{
+    display:flex ;
+    align-items: center;
+  
+
+  }

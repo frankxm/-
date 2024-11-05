@@ -1,0 +1,6 @@
+/* pages/fenye/fenye.wxss */
+.son{
+
+  height: 100rpx;
+  border-bottom: gray 2rpx solid;
+}

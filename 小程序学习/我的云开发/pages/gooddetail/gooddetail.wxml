@@ -1,0 +1,2 @@
+<image src="{{detail.img}}"></image>
+<text>商品名：{{detail.name}} 商品价格:{{detail.price}}</text>
